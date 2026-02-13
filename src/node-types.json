@@ -151,6 +151,10 @@
       "required": false,
       "types": [
         {
+          "type": "break",
+          "named": true
+        },
+        {
           "type": "catch",
           "named": true
         },
@@ -160,6 +164,10 @@
         },
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "continue",
           "named": true
         },
         {
@@ -175,6 +183,10 @@
           "named": true
         },
         {
+          "type": "for",
+          "named": true
+        },
+        {
           "type": "foreach",
           "named": true
         },
@@ -187,6 +199,10 @@
           "named": true
         },
         {
+          "type": "incr",
+          "named": true
+        },
+        {
           "type": "namespace",
           "named": true
         },
@@ -195,7 +211,15 @@
           "named": true
         },
         {
+          "type": "puts",
+          "named": true
+        },
+        {
           "type": "regexp",
+          "named": true
+        },
+        {
+          "type": "return",
           "named": true
         },
         {
@@ -208,6 +232,14 @@
         },
         {
           "type": "set",
+          "named": true
+        },
+        {
+          "type": "source",
+          "named": true
+        },
+        {
+          "type": "switch",
           "named": true
         },
         {
@@ -374,6 +406,10 @@
       "required": true,
       "types": [
         {
+          "type": "break",
+          "named": true
+        },
+        {
           "type": "catch",
           "named": true
         },
@@ -383,6 +419,10 @@
         },
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "continue",
           "named": true
         },
         {
@@ -398,6 +438,10 @@
           "named": true
         },
         {
+          "type": "for",
+          "named": true
+        },
+        {
           "type": "foreach",
           "named": true
         },
@@ -410,6 +454,10 @@
           "named": true
         },
         {
+          "type": "incr",
+          "named": true
+        },
+        {
           "type": "namespace",
           "named": true
         },
@@ -418,7 +466,15 @@
           "named": true
         },
         {
+          "type": "puts",
+          "named": true
+        },
+        {
           "type": "regexp",
+          "named": true
+        },
+        {
+          "type": "return",
           "named": true
         },
         {
@@ -431,6 +487,14 @@
         },
         {
           "type": "set",
+          "named": true
+        },
+        {
+          "type": "source",
+          "named": true
+        },
+        {
+          "type": "switch",
           "named": true
         },
         {
@@ -664,6 +728,57 @@
     }
   },
   {
+    "type": "for",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_index",
+          "named": true
+        },
+        {
+          "type": "braced_word",
+          "named": true
+        },
+        {
+          "type": "command_substitution",
+          "named": true
+        },
+        {
+          "type": "escaped_character",
+          "named": true
+        },
+        {
+          "type": "expr",
+          "named": true
+        },
+        {
+          "type": "option_flag",
+          "named": true
+        },
+        {
+          "type": "quoted_word",
+          "named": true
+        },
+        {
+          "type": "simple_word",
+          "named": true
+        },
+        {
+          "type": "unpack",
+          "named": true
+        },
+        {
+          "type": "variable_substitution",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "foreach",
     "named": true,
     "fields": {},
@@ -835,6 +950,53 @@
     }
   },
   {
+    "type": "incr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array_index",
+          "named": true
+        },
+        {
+          "type": "braced_word",
+          "named": true
+        },
+        {
+          "type": "command_substitution",
+          "named": true
+        },
+        {
+          "type": "escaped_character",
+          "named": true
+        },
+        {
+          "type": "option_flag",
+          "named": true
+        },
+        {
+          "type": "quoted_word",
+          "named": true
+        },
+        {
+          "type": "simple_word",
+          "named": true
+        },
+        {
+          "type": "unpack",
+          "named": true
+        },
+        {
+          "type": "variable_substitution",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "namespace",
     "named": true,
     "fields": {},
@@ -950,6 +1112,21 @@
     }
   },
   {
+    "type": "puts",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "word_list",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "quoted_word",
     "named": true,
     "fields": {},
@@ -1010,6 +1187,21 @@
         },
         {
           "type": "variable_substitution",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "return",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "word_list",
           "named": true
         }
       ]
@@ -1115,6 +1307,54 @@
     }
   },
   {
+    "type": "source",
+    "named": true,
+    "fields": {
+      "filename": {
+        "multiple": true,
+        "required": true,
+        "types": [
+          {
+            "type": "array_index",
+            "named": true
+          },
+          {
+            "type": "braced_word",
+            "named": true
+          },
+          {
+            "type": "command_substitution",
+            "named": true
+          },
+          {
+            "type": "escaped_character",
+            "named": true
+          },
+          {
+            "type": "option_flag",
+            "named": true
+          },
+          {
+            "type": "quoted_word",
+            "named": true
+          },
+          {
+            "type": "simple_word",
+            "named": true
+          },
+          {
+            "type": "unpack",
+            "named": true
+          },
+          {
+            "type": "variable_substitution",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "source_file",
     "named": true,
     "root": true,
@@ -1123,6 +1363,10 @@
       "multiple": true,
       "required": false,
       "types": [
+        {
+          "type": "break",
+          "named": true
+        },
         {
           "type": "catch",
           "named": true
@@ -1133,6 +1377,10 @@
         },
         {
           "type": "comment",
+          "named": true
+        },
+        {
+          "type": "continue",
           "named": true
         },
         {
@@ -1148,6 +1396,10 @@
           "named": true
         },
         {
+          "type": "for",
+          "named": true
+        },
+        {
           "type": "foreach",
           "named": true
         },
@@ -1160,6 +1412,10 @@
           "named": true
         },
         {
+          "type": "incr",
+          "named": true
+        },
+        {
           "type": "namespace",
           "named": true
         },
@@ -1168,7 +1424,15 @@
           "named": true
         },
         {
+          "type": "puts",
+          "named": true
+        },
+        {
           "type": "regexp",
+          "named": true
+        },
+        {
+          "type": "return",
           "named": true
         },
         {
@@ -1184,11 +1448,34 @@
           "named": true
         },
         {
+          "type": "source",
+          "named": true
+        },
+        {
+          "type": "switch",
+          "named": true
+        },
+        {
           "type": "try",
           "named": true
         },
         {
           "type": "while",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "switch",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "word_list",
           "named": true
         }
       ]
@@ -1585,11 +1872,19 @@
     "named": false
   },
   {
+    "type": "break",
+    "named": true
+  },
+  {
     "type": "catch",
     "named": false
   },
   {
     "type": "comment",
+    "named": true
+  },
+  {
+    "type": "continue",
     "named": true
   },
   {
@@ -1621,6 +1916,10 @@
     "named": false
   },
   {
+    "type": "for",
+    "named": false
+  },
+  {
     "type": "foreach",
     "named": false
   },
@@ -1634,6 +1933,10 @@
   },
   {
     "type": "in",
+    "named": false
+  },
+  {
+    "type": "incr",
     "named": false
   },
   {
@@ -1665,7 +1968,15 @@
     "named": false
   },
   {
+    "type": "puts",
+    "named": false
+  },
+  {
     "type": "regexp",
+    "named": false
+  },
+  {
+    "type": "return",
     "named": false
   },
   {
@@ -1683,6 +1994,14 @@
   {
     "type": "simple_word",
     "named": true
+  },
+  {
+    "type": "source",
+    "named": false
+  },
+  {
+    "type": "switch",
+    "named": false
   },
   {
     "type": "try",

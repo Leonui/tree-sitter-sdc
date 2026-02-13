@@ -8,7 +8,8 @@
       "scope": "source.sdc",
       "file-types": ["sdc"],
       "injection-regex": "^sdc$",
-      "highlights": "queries/highlights.scm"
+      "highlights": "queries/highlights.scm",
+      "locals": "queries/locals.scm"
     }
   ],
   "metadata": {

@@ -1,0 +1,177 @@
+==================
+for loop
+==================
+
+for {set i 0} {$i < 10} {incr i} {
+  puts $i
+}
+
+---
+
+(source_file
+  (for
+    (braced_word
+      (set
+        (id)
+        (simple_word)))
+    (expr
+      (binop_expr
+        (variable_substitution
+          (id))
+        (number)))
+    (braced_word
+      (incr
+        (simple_word)))
+    (braced_word
+      (puts
+        (word_list
+          (variable_substitution
+            (id)))))))
+
+==================
+break in loop
+==================
+
+foreach x $list {
+  if {$x == 0} {
+    break
+  }
+}
+
+---
+
+(source_file
+  (foreach
+    (arguments
+      (simple_word))
+    (variable_substitution
+      (id))
+    (braced_word
+      (if
+        condition: (expr
+          (binop_expr
+            (variable_substitution
+              (id))
+            (number)))
+        consequence: (braced_word
+          (break))))))
+
+==================
+continue in loop
+==================
+
+foreach x $list {
+  if {$x < 0} {
+    continue
+  }
+  puts $x
+}
+
+---
+
+(source_file
+  (foreach
+    (arguments
+      (simple_word))
+    (variable_substitution
+      (id))
+    (braced_word
+      (if
+        condition: (expr
+          (binop_expr
+            (variable_substitution
+              (id))
+            (number)))
+        consequence: (braced_word
+          (continue)))
+      (puts
+        (word_list
+          (variable_substitution
+            (id)))))))
+
+==================
+return from proc
+==================
+
+proc get_period {clk} {
+  return 10
+}
+
+---
+
+(source_file
+  (procedure
+    name: (simple_word)
+    arguments: (arguments
+      (argument
+        name: (simple_word)))
+    body: (braced_word
+      (return
+        (word_list
+          (simple_word))))))
+
+==================
+source command
+==================
+
+source timing_constraints.sdc
+
+---
+
+(source_file
+  (source
+    filename: (simple_word)))
+
+==================
+incr variable
+==================
+
+incr count
+
+---
+
+(source_file
+  (incr
+    (simple_word)))
+
+==================
+incr with amount
+==================
+
+incr count 5
+
+---
+
+(source_file
+  (incr
+    (simple_word)
+    (simple_word)))
+
+==================
+puts string
+==================
+
+puts "hello world"
+
+---
+
+(source_file
+  (puts
+    (word_list
+      (quoted_word))))
+
+==================
+switch command
+==================
+
+switch $mode fast slow
+
+---
+
+(source_file
+  (switch
+    (word_list
+      (variable_substitution
+        (id))
+      (simple_word)
+      (simple_word))))

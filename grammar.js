@@ -44,6 +44,26 @@ const SDC_CONSTRAINT_COMMANDS = [
   'current_design',
   'set_units',
   'set_wire_load_model',
+  // Phase 1: additional SDC constraint commands
+  'set_case_analysis',
+  'set_disable_timing',
+  'set_clock_transition',
+  'set_timing_derate',
+  'set_max_capacitance',
+  'set_min_capacitance',
+  'set_max_area',
+  'set_max_dynamic_power',
+  'set_max_leakage_power',
+  'set_operating_conditions',
+  'set_wire_load_mode',
+  'set_voltage',
+  'set_fanout_load',
+  'set_port_fanout_number',
+  'set_ideal_network',
+  'set_ideal_latency',
+  'set_ideal_transition',
+  'set_max_time_borrow',
+  'set_min_pulse_width',
 ];
 
 const SDC_QUERY_COMMANDS = [
@@ -58,6 +78,8 @@ const SDC_QUERY_COMMANDS = [
   'all_outputs',
   'all_clocks',
   'all_registers',
+  // Phase 1: additional SDC query commands
+  'current_instance',
 ];
 
 module.exports = grammar({
@@ -114,10 +136,18 @@ module.exports = grammar({
       $.set,
       $.try,
       $.foreach,
+      $.for,
       $.expr_cmd,
       $.while,
       $.catch,
       $.regexp,
+      $.switch,
+      $.break,
+      $.continue,
+      $.return,
+      $.source,
+      $.incr,
+      $.puts,
       // SDC-specific builtins
       $.sdc_constraint_command,
       $.sdc_query_command,
@@ -136,6 +166,26 @@ module.exports = grammar({
     expr_cmd: $ => seq('expr', $.expr),
 
     foreach: $ => seq('foreach', $.arguments, $._word_simple, $._word),
+
+    // for {init} {test} {next} {body}
+    for: $ => seq('for', $._word, $.expr, $._word, $._word),
+
+    // switch ?flags? value {body}
+    switch: $ => seq('switch', optional($.word_list)),
+
+    // control flow keywords
+    break: _ => 'break',
+    continue: _ => 'continue',
+    return: $ => seq('return', optional($.word_list)),
+
+    // source filename
+    source: $ => seq('source', field('filename', $._word)),
+
+    // incr var ?increment?
+    incr: $ => seq('incr', $._concat_word, optional($._word)),
+
+    // puts ?-nonewline? ?channelId? string
+    puts: $ => seq('puts', optional($.word_list)),
 
     global: $ => seq('global', repeat($._concat_word)),
 

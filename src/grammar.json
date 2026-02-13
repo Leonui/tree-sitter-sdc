@@ -162,6 +162,82 @@
                 {
                   "type": "STRING",
                   "value": "set_wire_load_model"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_case_analysis"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_disable_timing"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_clock_transition"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_timing_derate"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_capacitance"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_min_capacitance"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_area"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_dynamic_power"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_leakage_power"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_operating_conditions"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_wire_load_mode"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_voltage"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_fanout_load"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_port_fanout_number"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_ideal_network"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_ideal_latency"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_ideal_transition"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_time_borrow"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_min_pulse_width"
                 }
               ]
             },
@@ -241,6 +317,10 @@
                 {
                   "type": "STRING",
                   "value": "all_registers"
+                },
+                {
+                  "type": "STRING",
+                  "value": "current_instance"
                 }
               ]
             },
@@ -299,6 +379,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "for"
+        },
+        {
+          "type": "SYMBOL",
           "name": "expr_cmd"
         },
         {
@@ -312,6 +396,34 @@
         {
           "type": "SYMBOL",
           "name": "regexp"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "switch"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "break"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "continue"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "return"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "source"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "incr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "puts"
         },
         {
           "type": "SYMBOL",
@@ -395,6 +507,144 @@
         {
           "type": "SYMBOL",
           "name": "_word"
+        }
+      ]
+    },
+    "for": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "for"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "expr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_word"
+        }
+      ]
+    },
+    "switch": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "switch"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word_list"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "break": {
+      "type": "STRING",
+      "value": "break"
+    },
+    "continue": {
+      "type": "STRING",
+      "value": "continue"
+    },
+    "return": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "return"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word_list"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "source": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "source"
+        },
+        {
+          "type": "FIELD",
+          "name": "filename",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_word"
+          }
+        }
+      ]
+    },
+    "incr": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "incr"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_concat_word"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_word"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        }
+      ]
+    },
+    "puts": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "puts"
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "word_list"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
