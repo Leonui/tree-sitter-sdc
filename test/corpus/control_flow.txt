@@ -1,0 +1,101 @@
+==================
+if statement
+==================
+
+if {$fast_mode} {
+  set_max_delay 5 -from [all_inputs] -to [all_outputs]
+}
+
+---
+
+(source_file
+  (if
+    condition: (expr
+      (variable_substitution
+        (id)))
+    consequence: (braced_word
+      (sdc_constraint_command
+        name: (sdc_command_name)
+        arguments: (word_list
+          (simple_word)
+          (option_flag)
+          (command_substitution
+            (sdc_query_command
+              name: (sdc_query_name)))
+          (option_flag)
+          (command_substitution
+            (sdc_query_command
+              name: (sdc_query_name))))))))
+
+==================
+foreach loop
+==================
+
+foreach port [get_ports *] {
+  set_load 0.1 $port
+}
+
+---
+
+(source_file
+  (foreach
+    (arguments
+      (simple_word))
+    (command_substitution
+      (sdc_query_command
+        name: (sdc_query_name)
+        arguments: (word_list
+          (simple_word))))
+    (braced_word
+      (sdc_constraint_command
+        name: (sdc_command_name)
+        arguments: (word_list
+          (simple_word)
+          (variable_substitution
+            (id)))))))
+
+==================
+proc definition
+==================
+
+proc apply_constraints {clk_name period} {
+  create_clock -name $clk_name -period $period [get_ports $clk_name]
+}
+
+---
+
+(source_file
+  (procedure
+    name: (simple_word)
+    arguments: (arguments
+      (argument
+        name: (simple_word))
+      (argument
+        name: (simple_word)))
+    body: (braced_word
+      (sdc_constraint_command
+        name: (sdc_command_name)
+        arguments: (word_list
+          (option_flag)
+          (variable_substitution
+            (id))
+          (option_flag)
+          (variable_substitution
+            (id))
+          (command_substitution
+            (sdc_query_command
+              name: (sdc_query_name)
+              arguments: (word_list
+                (variable_substitution
+                  (id))))))))))
+
+==================
+comment
+==================
+
+# This is a comment
+
+---
+
+(source_file
+  (comment))

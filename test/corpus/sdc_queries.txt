@@ -1,0 +1,94 @@
+==================
+get_ports query
+==================
+
+get_ports clk
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (simple_word))))
+
+==================
+get_pins with wildcard
+==================
+
+get_pins */D
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (simple_word))))
+
+==================
+all_inputs no arguments
+==================
+
+all_inputs
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)))
+
+==================
+all_outputs no arguments
+==================
+
+all_outputs
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)))
+
+==================
+get_clocks with filter
+==================
+
+get_clocks -filter "is_generated == true"
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (option_flag)
+      (quoted_word))))
+
+==================
+nested query in constraint
+==================
+
+set_load 0.5 [get_ports [get_nets -of_objects [get_pins cpu/out]]]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (simple_word)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (command_substitution
+              (sdc_query_command
+                name: (sdc_query_name)
+                arguments: (word_list
+                  (option_flag)
+                  (command_substitution
+                    (sdc_query_command
+                      name: (sdc_query_name)
+                      arguments: (word_list
+                        (simple_word)))))))))))))

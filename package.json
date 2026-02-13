@@ -1,0 +1,47 @@
+{
+  "name": "tree-sitter-sdc",
+  "version": "0.1.0",
+  "description": "SDC (Synopsys Design Constraints) grammar for tree-sitter",
+  "main": "bindings/node",
+  "types": "bindings/node",
+  "keywords": [
+    "tree-sitter",
+    "parser",
+    "lexer",
+    "sdc",
+    "incremental",
+    "parsing"
+  ],
+  "files": [
+    "grammar.js",
+    "binding.gyp",
+    "bindings/node/*",
+    "src/**",
+    "tree-sitter.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leonui/tree-sitter-sdc.git"
+  },
+  "scripts": {
+    "install": "node-gyp-build",
+    "test": "tree-sitter test"
+  },
+  "author": "Ang Li <mail@angme.org>",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^8.2.1",
+    "node-gyp-build": "^4.8.2"
+  },
+  "peerDependencies": {
+    "tree-sitter": "^0.22.4"
+  },
+  "peerDependenciesMeta": {
+    "tree_sitter": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.25.3"
+  }
+}

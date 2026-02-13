@@ -1,0 +1,123 @@
+==================
+SDC constraint command with options
+==================
+
+create_clock -period 10 -name clk [get_ports clk]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (simple_word)
+      (option_flag)
+      (simple_word)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))
+
+==================
+set_input_delay with clock reference
+==================
+
+set_input_delay -clock clk -max 2.0 [get_ports data_in]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (simple_word)
+      (option_flag)
+      (simple_word)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))
+
+==================
+set_false_path
+==================
+
+set_false_path -from [get_clocks clk1] -to [get_clocks clk2]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word))))
+      (option_flag)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))
+
+==================
+set_multicycle_path with setup
+==================
+
+set_multicycle_path -setup 2 -from [get_cells reg1] -to [get_cells reg2]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (simple_word)
+      (option_flag)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word))))
+      (option_flag)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))
+
+==================
+create_generated_clock
+==================
+
+create_generated_clock -name gen_clk -source [get_ports clk] -divide_by 2 [get_pins div/Q]
+
+---
+
+(source_file
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (simple_word)
+      (option_flag)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word))))
+      (option_flag)
+      (simple_word)
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))

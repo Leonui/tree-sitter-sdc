@@ -1,0 +1,71 @@
+==================
+set variable
+==================
+
+set clk_period 10
+
+---
+
+(source_file
+  (set
+    (id)
+    (simple_word)))
+
+==================
+variable substitution
+==================
+
+set half_period [expr {$clk_period / 2}]
+
+---
+
+(source_file
+  (set
+    (id)
+    (command_substitution
+      (expr_cmd
+        (expr
+          (binop_expr
+            (variable_substitution
+              (id))
+            (number)))))))
+
+==================
+set with command substitution
+==================
+
+set all_ins [all_inputs]
+
+---
+
+(source_file
+  (set
+    (id)
+    (command_substitution
+      (sdc_query_command
+        name: (sdc_query_name)))))
+
+==================
+variable reference in constraint
+==================
+
+set period 10
+create_clock -period $period [get_ports clk]
+
+---
+
+(source_file
+  (set
+    (id)
+    (simple_word))
+  (sdc_constraint_command
+    name: (sdc_command_name)
+    arguments: (word_list
+      (option_flag)
+      (variable_substitution
+        (id))
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
+  "grammars": [
+    {
+      "name": "sdc",
+      "camelcase": "Sdc",
+      "title": "SDC",
+      "scope": "source.sdc",
+      "file-types": ["sdc"],
+      "injection-regex": "^sdc$",
+      "highlights": "queries/highlights.scm"
+    }
+  ],
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "SDC (Synopsys Design Constraints) grammar for tree-sitter",
+    "authors": [
+      {
+        "name": "Ang Li",
+        "email": "mail@angme.org"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/Leonui/tree-sitter-sdc"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "node": true,
+    "rust": true
+  }
+}
