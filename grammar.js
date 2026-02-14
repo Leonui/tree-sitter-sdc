@@ -44,7 +44,6 @@ const SDC_CONSTRAINT_COMMANDS = [
   'current_design',
   'set_units',
   'set_wire_load_model',
-  // Phase 1: additional SDC constraint commands
   'set_case_analysis',
   'set_disable_timing',
   'set_clock_transition',
@@ -64,6 +63,25 @@ const SDC_CONSTRAINT_COMMANDS = [
   'set_ideal_transition',
   'set_max_time_borrow',
   'set_min_pulse_width',
+  'set_data_check',
+  'set_sense',
+  'set_resistance',
+  'set_capacitance',
+  'reset_design',
+  'set_hierarchy_separator',
+  'set_annotated_delay',
+  'set_annotated_check',
+  'set_max_skew',
+  'set_clock_sense',
+  'set_logic_dc',
+  'set_logic_one',
+  'set_logic_zero',
+  // environment/design rule commands
+  'set_temperature',
+  'set_switching_activity',
+  'set_slew_derate_from_library',
+  // utility commands
+  'derive_clock_uncertainty',
 ];
 
 const SDC_QUERY_COMMANDS = [
@@ -78,8 +96,11 @@ const SDC_QUERY_COMMANDS = [
   'all_outputs',
   'all_clocks',
   'all_registers',
-  // Phase 1: additional SDC query commands
   'current_instance',
+  'get_generated_clocks',
+  'get_object_name',
+  'get_property',
+  'get_attribute',
 ];
 
 module.exports = grammar({

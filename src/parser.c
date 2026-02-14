@@ -9,9 +9,9 @@
 #define LANGUAGE_VERSION 15
 #define STATE_COUNT 835
 #define LARGE_STATE_COUNT 36
-#define SYMBOL_COUNT 190
+#define SYMBOL_COUNT 211
 #define ALIAS_COUNT 0
-#define TOKEN_COUNT 131
+#define TOKEN_COUNT 152
 #define EXTERNAL_TOKEN_COUNT 2
 #define FIELD_COUNT 8
 #define MAX_ALIAS_SEQUENCE_LENGTH 9
@@ -66,149 +66,170 @@ enum ts_symbol_identifiers {
   anon_sym_set_ideal_transition = 44,
   anon_sym_set_max_time_borrow = 45,
   anon_sym_set_min_pulse_width = 46,
-  anon_sym_get_ports = 47,
-  anon_sym_get_pins = 48,
-  anon_sym_get_clocks = 49,
-  anon_sym_get_cells = 50,
-  anon_sym_get_nets = 51,
-  anon_sym_get_lib_cells = 52,
-  anon_sym_get_lib_pins = 53,
-  anon_sym_all_inputs = 54,
-  anon_sym_all_outputs = 55,
-  anon_sym_all_clocks = 56,
-  anon_sym_all_registers = 57,
-  anon_sym_current_instance = 58,
-  anon_sym_regexp = 59,
-  anon_sym_while = 60,
-  anon_sym_expr = 61,
-  anon_sym_foreach = 62,
-  anon_sym_for = 63,
-  anon_sym_switch = 64,
-  sym_break = 65,
-  sym_continue = 66,
-  anon_sym_return = 67,
-  anon_sym_source = 68,
-  anon_sym_incr = 69,
-  anon_sym_puts = 70,
-  anon_sym_global = 71,
-  anon_sym_namespace = 72,
-  anon_sym_try = 73,
-  anon_sym_on = 74,
-  anon_sym_error = 75,
-  anon_sym_finally = 76,
-  sym_unpack = 77,
-  anon_sym_COLON_COLON = 78,
-  sym__ident_imm = 79,
-  sym__ident = 80,
-  anon_sym_COLON_COLON2 = 81,
-  anon_sym_LPAREN = 82,
-  anon_sym_RPAREN = 83,
-  anon_sym_DOLLAR = 84,
-  anon_sym_LBRACE = 85,
-  aux_sym_variable_substitution_token1 = 86,
-  anon_sym_RBRACE = 87,
-  anon_sym_set = 88,
-  anon_sym_proc = 89,
-  sym_number = 90,
-  sym__boolean = 91,
-  anon_sym_LPAREN2 = 92,
-  anon_sym_DASH = 93,
-  anon_sym_PLUS = 94,
-  anon_sym_TILDE = 95,
-  anon_sym_BANG = 96,
-  anon_sym_STAR_STAR = 97,
-  anon_sym_SLASH = 98,
-  anon_sym_STAR = 99,
-  anon_sym_PERCENT = 100,
-  anon_sym_LT_LT = 101,
-  anon_sym_GT_GT = 102,
-  anon_sym_GT = 103,
-  anon_sym_LT = 104,
-  anon_sym_GT_EQ = 105,
-  anon_sym_LT_EQ = 106,
-  anon_sym_EQ_EQ = 107,
-  anon_sym_BANG_EQ = 108,
-  anon_sym_eq = 109,
-  anon_sym_ne = 110,
-  anon_sym_in = 111,
-  anon_sym_ni = 112,
-  anon_sym_AMP = 113,
-  anon_sym_CARET = 114,
-  anon_sym_PIPE = 115,
-  anon_sym_AMP_AMP = 116,
-  anon_sym_PIPE_PIPE = 117,
-  anon_sym_QMARK = 118,
-  anon_sym_COLON = 119,
-  anon_sym_elseif = 120,
-  anon_sym_else = 121,
-  anon_sym_if = 122,
-  anon_sym_catch = 123,
-  anon_sym_DQUOTE = 124,
-  sym_escaped_character = 125,
-  sym__quoted_word_content = 126,
-  anon_sym_LBRACK = 127,
-  anon_sym_RBRACK = 128,
-  sym__concat = 129,
-  sym__immediate = 130,
-  sym_source_file = 131,
-  sym_sdc_constraint_command = 132,
-  sym_sdc_query_command = 133,
-  sym_regexp = 134,
-  sym_while = 135,
-  sym_expr_cmd = 136,
-  sym_foreach = 137,
-  sym_for = 138,
-  sym_switch = 139,
-  sym_return = 140,
-  sym_source = 141,
-  sym_incr = 142,
-  sym_puts = 143,
-  sym_global = 144,
-  sym_namespace = 145,
-  sym_try = 146,
-  sym_finally = 147,
-  sym__command = 148,
-  sym_command = 149,
-  sym_word_list = 150,
-  sym__word_simple = 151,
-  sym__concat_word = 152,
-  sym__ns_delim = 153,
-  sym__id_immediate = 154,
-  sym_id = 155,
-  sym_array_index = 156,
-  sym_variable_substitution = 157,
-  sym_braced_word = 158,
-  sym_braced_word_simple = 159,
-  sym_set = 160,
-  sym_procedure = 161,
-  sym__argument_word = 162,
-  sym_argument = 163,
-  sym_arguments = 164,
-  sym__expr_atom_no_brace = 165,
-  sym__expr = 166,
-  sym_expr = 167,
-  sym_unary_expr = 168,
-  sym_binop_expr = 169,
-  sym_ternary_expr = 170,
-  sym_elseif = 171,
-  sym_else = 172,
-  sym_if = 173,
-  sym__conditional = 174,
-  sym_catch = 175,
-  sym_quoted_word = 176,
-  sym_command_substitution = 177,
-  aux_sym_source_file_repeat1 = 178,
-  aux_sym_regexp_repeat1 = 179,
-  aux_sym_word_list_repeat1 = 180,
-  aux_sym__word_simple_repeat1 = 181,
-  aux_sym__concat_word_repeat1 = 182,
-  aux_sym__id_immediate_repeat1 = 183,
-  aux_sym_braced_word_repeat1 = 184,
-  aux_sym_braced_word_repeat2 = 185,
-  aux_sym_braced_word_simple_repeat1 = 186,
-  aux_sym_arguments_repeat1 = 187,
-  aux_sym_if_repeat1 = 188,
-  aux_sym_quoted_word_repeat1 = 189,
+  anon_sym_set_data_check = 47,
+  anon_sym_set_sense = 48,
+  anon_sym_set_resistance = 49,
+  anon_sym_set_capacitance = 50,
+  anon_sym_reset_design = 51,
+  anon_sym_set_hierarchy_separator = 52,
+  anon_sym_set_annotated_delay = 53,
+  anon_sym_set_annotated_check = 54,
+  anon_sym_set_max_skew = 55,
+  anon_sym_set_clock_sense = 56,
+  anon_sym_set_logic_dc = 57,
+  anon_sym_set_logic_one = 58,
+  anon_sym_set_logic_zero = 59,
+  anon_sym_set_temperature = 60,
+  anon_sym_set_switching_activity = 61,
+  anon_sym_set_slew_derate_from_library = 62,
+  anon_sym_derive_clock_uncertainty = 63,
+  anon_sym_get_ports = 64,
+  anon_sym_get_pins = 65,
+  anon_sym_get_clocks = 66,
+  anon_sym_get_cells = 67,
+  anon_sym_get_nets = 68,
+  anon_sym_get_lib_cells = 69,
+  anon_sym_get_lib_pins = 70,
+  anon_sym_all_inputs = 71,
+  anon_sym_all_outputs = 72,
+  anon_sym_all_clocks = 73,
+  anon_sym_all_registers = 74,
+  anon_sym_current_instance = 75,
+  anon_sym_get_generated_clocks = 76,
+  anon_sym_get_object_name = 77,
+  anon_sym_get_property = 78,
+  anon_sym_get_attribute = 79,
+  anon_sym_regexp = 80,
+  anon_sym_while = 81,
+  anon_sym_expr = 82,
+  anon_sym_foreach = 83,
+  anon_sym_for = 84,
+  anon_sym_switch = 85,
+  sym_break = 86,
+  sym_continue = 87,
+  anon_sym_return = 88,
+  anon_sym_source = 89,
+  anon_sym_incr = 90,
+  anon_sym_puts = 91,
+  anon_sym_global = 92,
+  anon_sym_namespace = 93,
+  anon_sym_try = 94,
+  anon_sym_on = 95,
+  anon_sym_error = 96,
+  anon_sym_finally = 97,
+  sym_unpack = 98,
+  anon_sym_COLON_COLON = 99,
+  sym__ident_imm = 100,
+  sym__ident = 101,
+  anon_sym_COLON_COLON2 = 102,
+  anon_sym_LPAREN = 103,
+  anon_sym_RPAREN = 104,
+  anon_sym_DOLLAR = 105,
+  anon_sym_LBRACE = 106,
+  aux_sym_variable_substitution_token1 = 107,
+  anon_sym_RBRACE = 108,
+  anon_sym_set = 109,
+  anon_sym_proc = 110,
+  sym_number = 111,
+  sym__boolean = 112,
+  anon_sym_LPAREN2 = 113,
+  anon_sym_DASH = 114,
+  anon_sym_PLUS = 115,
+  anon_sym_TILDE = 116,
+  anon_sym_BANG = 117,
+  anon_sym_STAR_STAR = 118,
+  anon_sym_SLASH = 119,
+  anon_sym_STAR = 120,
+  anon_sym_PERCENT = 121,
+  anon_sym_LT_LT = 122,
+  anon_sym_GT_GT = 123,
+  anon_sym_GT = 124,
+  anon_sym_LT = 125,
+  anon_sym_GT_EQ = 126,
+  anon_sym_LT_EQ = 127,
+  anon_sym_EQ_EQ = 128,
+  anon_sym_BANG_EQ = 129,
+  anon_sym_eq = 130,
+  anon_sym_ne = 131,
+  anon_sym_in = 132,
+  anon_sym_ni = 133,
+  anon_sym_AMP = 134,
+  anon_sym_CARET = 135,
+  anon_sym_PIPE = 136,
+  anon_sym_AMP_AMP = 137,
+  anon_sym_PIPE_PIPE = 138,
+  anon_sym_QMARK = 139,
+  anon_sym_COLON = 140,
+  anon_sym_elseif = 141,
+  anon_sym_else = 142,
+  anon_sym_if = 143,
+  anon_sym_catch = 144,
+  anon_sym_DQUOTE = 145,
+  sym_escaped_character = 146,
+  sym__quoted_word_content = 147,
+  anon_sym_LBRACK = 148,
+  anon_sym_RBRACK = 149,
+  sym__concat = 150,
+  sym__immediate = 151,
+  sym_source_file = 152,
+  sym_sdc_constraint_command = 153,
+  sym_sdc_query_command = 154,
+  sym_regexp = 155,
+  sym_while = 156,
+  sym_expr_cmd = 157,
+  sym_foreach = 158,
+  sym_for = 159,
+  sym_switch = 160,
+  sym_return = 161,
+  sym_source = 162,
+  sym_incr = 163,
+  sym_puts = 164,
+  sym_global = 165,
+  sym_namespace = 166,
+  sym_try = 167,
+  sym_finally = 168,
+  sym__command = 169,
+  sym_command = 170,
+  sym_word_list = 171,
+  sym__word_simple = 172,
+  sym__concat_word = 173,
+  sym__ns_delim = 174,
+  sym__id_immediate = 175,
+  sym_id = 176,
+  sym_array_index = 177,
+  sym_variable_substitution = 178,
+  sym_braced_word = 179,
+  sym_braced_word_simple = 180,
+  sym_set = 181,
+  sym_procedure = 182,
+  sym__argument_word = 183,
+  sym_argument = 184,
+  sym_arguments = 185,
+  sym__expr_atom_no_brace = 186,
+  sym__expr = 187,
+  sym_expr = 188,
+  sym_unary_expr = 189,
+  sym_binop_expr = 190,
+  sym_ternary_expr = 191,
+  sym_elseif = 192,
+  sym_else = 193,
+  sym_if = 194,
+  sym__conditional = 195,
+  sym_catch = 196,
+  sym_quoted_word = 197,
+  sym_command_substitution = 198,
+  aux_sym_source_file_repeat1 = 199,
+  aux_sym_regexp_repeat1 = 200,
+  aux_sym_word_list_repeat1 = 201,
+  aux_sym__word_simple_repeat1 = 202,
+  aux_sym__concat_word_repeat1 = 203,
+  aux_sym__id_immediate_repeat1 = 204,
+  aux_sym_braced_word_repeat1 = 205,
+  aux_sym_braced_word_repeat2 = 206,
+  aux_sym_braced_word_simple_repeat1 = 207,
+  aux_sym_arguments_repeat1 = 208,
+  aux_sym_if_repeat1 = 209,
+  aux_sym_quoted_word_repeat1 = 210,
 };
 
 static const char * const ts_symbol_names[] = {
@@ -259,6 +280,23 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_set_ideal_transition] = "sdc_command_name",
   [anon_sym_set_max_time_borrow] = "sdc_command_name",
   [anon_sym_set_min_pulse_width] = "sdc_command_name",
+  [anon_sym_set_data_check] = "sdc_command_name",
+  [anon_sym_set_sense] = "sdc_command_name",
+  [anon_sym_set_resistance] = "sdc_command_name",
+  [anon_sym_set_capacitance] = "sdc_command_name",
+  [anon_sym_reset_design] = "sdc_command_name",
+  [anon_sym_set_hierarchy_separator] = "sdc_command_name",
+  [anon_sym_set_annotated_delay] = "sdc_command_name",
+  [anon_sym_set_annotated_check] = "sdc_command_name",
+  [anon_sym_set_max_skew] = "sdc_command_name",
+  [anon_sym_set_clock_sense] = "sdc_command_name",
+  [anon_sym_set_logic_dc] = "sdc_command_name",
+  [anon_sym_set_logic_one] = "sdc_command_name",
+  [anon_sym_set_logic_zero] = "sdc_command_name",
+  [anon_sym_set_temperature] = "sdc_command_name",
+  [anon_sym_set_switching_activity] = "sdc_command_name",
+  [anon_sym_set_slew_derate_from_library] = "sdc_command_name",
+  [anon_sym_derive_clock_uncertainty] = "sdc_command_name",
   [anon_sym_get_ports] = "sdc_query_name",
   [anon_sym_get_pins] = "sdc_query_name",
   [anon_sym_get_clocks] = "sdc_query_name",
@@ -271,6 +309,10 @@ static const char * const ts_symbol_names[] = {
   [anon_sym_all_clocks] = "sdc_query_name",
   [anon_sym_all_registers] = "sdc_query_name",
   [anon_sym_current_instance] = "sdc_query_name",
+  [anon_sym_get_generated_clocks] = "sdc_query_name",
+  [anon_sym_get_object_name] = "sdc_query_name",
+  [anon_sym_get_property] = "sdc_query_name",
+  [anon_sym_get_attribute] = "sdc_query_name",
   [anon_sym_regexp] = "regexp",
   [anon_sym_while] = "while",
   [anon_sym_expr] = "expr",
@@ -452,6 +494,23 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_set_ideal_transition] = anon_sym_create_clock,
   [anon_sym_set_max_time_borrow] = anon_sym_create_clock,
   [anon_sym_set_min_pulse_width] = anon_sym_create_clock,
+  [anon_sym_set_data_check] = anon_sym_create_clock,
+  [anon_sym_set_sense] = anon_sym_create_clock,
+  [anon_sym_set_resistance] = anon_sym_create_clock,
+  [anon_sym_set_capacitance] = anon_sym_create_clock,
+  [anon_sym_reset_design] = anon_sym_create_clock,
+  [anon_sym_set_hierarchy_separator] = anon_sym_create_clock,
+  [anon_sym_set_annotated_delay] = anon_sym_create_clock,
+  [anon_sym_set_annotated_check] = anon_sym_create_clock,
+  [anon_sym_set_max_skew] = anon_sym_create_clock,
+  [anon_sym_set_clock_sense] = anon_sym_create_clock,
+  [anon_sym_set_logic_dc] = anon_sym_create_clock,
+  [anon_sym_set_logic_one] = anon_sym_create_clock,
+  [anon_sym_set_logic_zero] = anon_sym_create_clock,
+  [anon_sym_set_temperature] = anon_sym_create_clock,
+  [anon_sym_set_switching_activity] = anon_sym_create_clock,
+  [anon_sym_set_slew_derate_from_library] = anon_sym_create_clock,
+  [anon_sym_derive_clock_uncertainty] = anon_sym_create_clock,
   [anon_sym_get_ports] = anon_sym_get_ports,
   [anon_sym_get_pins] = anon_sym_get_ports,
   [anon_sym_get_clocks] = anon_sym_get_ports,
@@ -464,6 +523,10 @@ static const TSSymbol ts_symbol_map[] = {
   [anon_sym_all_clocks] = anon_sym_get_ports,
   [anon_sym_all_registers] = anon_sym_get_ports,
   [anon_sym_current_instance] = anon_sym_get_ports,
+  [anon_sym_get_generated_clocks] = anon_sym_get_ports,
+  [anon_sym_get_object_name] = anon_sym_get_ports,
+  [anon_sym_get_property] = anon_sym_get_ports,
+  [anon_sym_get_attribute] = anon_sym_get_ports,
   [anon_sym_regexp] = anon_sym_regexp,
   [anon_sym_while] = anon_sym_while,
   [anon_sym_expr] = anon_sym_expr,
@@ -786,6 +849,74 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .visible = true,
     .named = true,
   },
+  [anon_sym_set_data_check] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_sense] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_resistance] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_capacitance] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_reset_design] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_hierarchy_separator] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_annotated_delay] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_annotated_check] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_max_skew] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_clock_sense] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_logic_dc] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_logic_one] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_logic_zero] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_temperature] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_switching_activity] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_set_slew_derate_from_library] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_derive_clock_uncertainty] = {
+    .visible = true,
+    .named = true,
+  },
   [anon_sym_get_ports] = {
     .visible = true,
     .named = true,
@@ -831,6 +962,22 @@ static const TSSymbolMetadata ts_symbol_metadata[] = {
     .named = true,
   },
   [anon_sym_current_instance] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_get_generated_clocks] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_get_object_name] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_get_property] = {
+    .visible = true,
+    .named = true,
+  },
+  [anon_sym_get_attribute] = {
     .visible = true,
     .named = true,
   },
@@ -3927,1890 +4074,2574 @@ static bool ts_lex_keywords(TSLexer *lexer, TSStateId state) {
       if (lookahead == 'a') ADVANCE(2);
       if (lookahead == 'b') ADVANCE(3);
       if (lookahead == 'c') ADVANCE(4);
-      if (lookahead == 'e') ADVANCE(5);
-      if (lookahead == 'f') ADVANCE(6);
-      if (lookahead == 'g') ADVANCE(7);
-      if (lookahead == 'i') ADVANCE(8);
-      if (lookahead == 'n') ADVANCE(9);
-      if (lookahead == 'p') ADVANCE(10);
-      if (lookahead == 'r') ADVANCE(11);
-      if (lookahead == 's') ADVANCE(12);
-      if (lookahead == 't') ADVANCE(13);
-      if (lookahead == 'w') ADVANCE(14);
+      if (lookahead == 'd') ADVANCE(5);
+      if (lookahead == 'e') ADVANCE(6);
+      if (lookahead == 'f') ADVANCE(7);
+      if (lookahead == 'g') ADVANCE(8);
+      if (lookahead == 'i') ADVANCE(9);
+      if (lookahead == 'n') ADVANCE(10);
+      if (lookahead == 'p') ADVANCE(11);
+      if (lookahead == 'r') ADVANCE(12);
+      if (lookahead == 's') ADVANCE(13);
+      if (lookahead == 't') ADVANCE(14);
+      if (lookahead == 'w') ADVANCE(15);
       if (('\t' <= lookahead && lookahead <= '\r') ||
           lookahead == ' ') SKIP(0);
       END_STATE();
     case 1:
       if (lookahead == '\n') SKIP(0);
-      if (lookahead == '\r') SKIP(15);
+      if (lookahead == '\r') SKIP(16);
       END_STATE();
     case 2:
-      if (lookahead == 'l') ADVANCE(16);
+      if (lookahead == 'l') ADVANCE(17);
       END_STATE();
     case 3:
-      if (lookahead == 'r') ADVANCE(17);
+      if (lookahead == 'r') ADVANCE(18);
       END_STATE();
     case 4:
-      if (lookahead == 'a') ADVANCE(18);
-      if (lookahead == 'o') ADVANCE(19);
-      if (lookahead == 'r') ADVANCE(20);
-      if (lookahead == 'u') ADVANCE(21);
+      if (lookahead == 'a') ADVANCE(19);
+      if (lookahead == 'o') ADVANCE(20);
+      if (lookahead == 'r') ADVANCE(21);
+      if (lookahead == 'u') ADVANCE(22);
       END_STATE();
     case 5:
-      if (lookahead == 'r') ADVANCE(22);
-      if (lookahead == 'x') ADVANCE(23);
+      if (lookahead == 'e') ADVANCE(23);
       END_STATE();
     case 6:
-      if (lookahead == 'o') ADVANCE(24);
+      if (lookahead == 'r') ADVANCE(24);
+      if (lookahead == 'x') ADVANCE(25);
       END_STATE();
     case 7:
-      if (lookahead == 'e') ADVANCE(25);
-      if (lookahead == 'l') ADVANCE(26);
-      if (lookahead == 'r') ADVANCE(27);
+      if (lookahead == 'o') ADVANCE(26);
       END_STATE();
     case 8:
-      if (lookahead == 'f') ADVANCE(28);
-      if (lookahead == 'n') ADVANCE(29);
+      if (lookahead == 'e') ADVANCE(27);
+      if (lookahead == 'l') ADVANCE(28);
+      if (lookahead == 'r') ADVANCE(29);
       END_STATE();
     case 9:
-      if (lookahead == 'a') ADVANCE(30);
+      if (lookahead == 'f') ADVANCE(30);
+      if (lookahead == 'n') ADVANCE(31);
       END_STATE();
     case 10:
-      if (lookahead == 'r') ADVANCE(31);
-      if (lookahead == 'u') ADVANCE(32);
+      if (lookahead == 'a') ADVANCE(32);
       END_STATE();
     case 11:
-      if (lookahead == 'e') ADVANCE(33);
+      if (lookahead == 'r') ADVANCE(33);
+      if (lookahead == 'u') ADVANCE(34);
       END_STATE();
     case 12:
-      if (lookahead == 'e') ADVANCE(34);
-      if (lookahead == 'o') ADVANCE(35);
-      if (lookahead == 'w') ADVANCE(36);
+      if (lookahead == 'e') ADVANCE(35);
       END_STATE();
     case 13:
-      if (lookahead == 'r') ADVANCE(37);
+      if (lookahead == 'e') ADVANCE(36);
+      if (lookahead == 'o') ADVANCE(37);
+      if (lookahead == 'w') ADVANCE(38);
       END_STATE();
     case 14:
-      if (lookahead == 'h') ADVANCE(38);
+      if (lookahead == 'r') ADVANCE(39);
       END_STATE();
     case 15:
-      if (lookahead == '\n') SKIP(0);
+      if (lookahead == 'h') ADVANCE(40);
       END_STATE();
     case 16:
-      if (lookahead == 'l') ADVANCE(39);
+      if (lookahead == '\n') SKIP(0);
       END_STATE();
     case 17:
-      if (lookahead == 'e') ADVANCE(40);
+      if (lookahead == 'l') ADVANCE(41);
       END_STATE();
     case 18:
-      if (lookahead == 't') ADVANCE(41);
+      if (lookahead == 'e') ADVANCE(42);
       END_STATE();
     case 19:
-      if (lookahead == 'n') ADVANCE(42);
+      if (lookahead == 't') ADVANCE(43);
       END_STATE();
     case 20:
-      if (lookahead == 'e') ADVANCE(43);
+      if (lookahead == 'n') ADVANCE(44);
       END_STATE();
     case 21:
-      if (lookahead == 'r') ADVANCE(44);
+      if (lookahead == 'e') ADVANCE(45);
       END_STATE();
     case 22:
-      if (lookahead == 'r') ADVANCE(45);
+      if (lookahead == 'r') ADVANCE(46);
       END_STATE();
     case 23:
-      if (lookahead == 'p') ADVANCE(46);
-      END_STATE();
-    case 24:
       if (lookahead == 'r') ADVANCE(47);
       END_STATE();
+    case 24:
+      if (lookahead == 'r') ADVANCE(48);
+      END_STATE();
     case 25:
-      if (lookahead == 't') ADVANCE(48);
+      if (lookahead == 'p') ADVANCE(49);
       END_STATE();
     case 26:
-      if (lookahead == 'o') ADVANCE(49);
+      if (lookahead == 'r') ADVANCE(50);
       END_STATE();
     case 27:
-      if (lookahead == 'o') ADVANCE(50);
+      if (lookahead == 't') ADVANCE(51);
       END_STATE();
     case 28:
-      ACCEPT_TOKEN(anon_sym_if);
+      if (lookahead == 'o') ADVANCE(52);
       END_STATE();
     case 29:
-      if (lookahead == 'c') ADVANCE(51);
-      END_STATE();
-    case 30:
-      if (lookahead == 'm') ADVANCE(52);
-      END_STATE();
-    case 31:
       if (lookahead == 'o') ADVANCE(53);
       END_STATE();
+    case 30:
+      ACCEPT_TOKEN(anon_sym_if);
+      END_STATE();
+    case 31:
+      if (lookahead == 'c') ADVANCE(54);
+      END_STATE();
     case 32:
-      if (lookahead == 't') ADVANCE(54);
+      if (lookahead == 'm') ADVANCE(55);
       END_STATE();
     case 33:
-      if (lookahead == 'g') ADVANCE(55);
-      if (lookahead == 'p') ADVANCE(56);
-      if (lookahead == 't') ADVANCE(57);
+      if (lookahead == 'o') ADVANCE(56);
       END_STATE();
     case 34:
-      if (lookahead == 't') ADVANCE(58);
+      if (lookahead == 't') ADVANCE(57);
       END_STATE();
     case 35:
-      if (lookahead == 'u') ADVANCE(59);
+      if (lookahead == 'g') ADVANCE(58);
+      if (lookahead == 'p') ADVANCE(59);
+      if (lookahead == 's') ADVANCE(60);
+      if (lookahead == 't') ADVANCE(61);
       END_STATE();
     case 36:
-      if (lookahead == 'i') ADVANCE(60);
+      if (lookahead == 't') ADVANCE(62);
       END_STATE();
     case 37:
-      if (lookahead == 'y') ADVANCE(61);
+      if (lookahead == 'u') ADVANCE(63);
       END_STATE();
     case 38:
-      if (lookahead == 'i') ADVANCE(62);
+      if (lookahead == 'i') ADVANCE(64);
       END_STATE();
     case 39:
-      if (lookahead == '_') ADVANCE(63);
+      if (lookahead == 'y') ADVANCE(65);
       END_STATE();
     case 40:
-      if (lookahead == 'a') ADVANCE(64);
+      if (lookahead == 'i') ADVANCE(66);
       END_STATE();
     case 41:
-      if (lookahead == 'c') ADVANCE(65);
+      if (lookahead == '_') ADVANCE(67);
       END_STATE();
     case 42:
-      if (lookahead == 't') ADVANCE(66);
+      if (lookahead == 'a') ADVANCE(68);
       END_STATE();
     case 43:
-      if (lookahead == 'a') ADVANCE(67);
+      if (lookahead == 'c') ADVANCE(69);
       END_STATE();
     case 44:
-      if (lookahead == 'r') ADVANCE(68);
+      if (lookahead == 't') ADVANCE(70);
       END_STATE();
     case 45:
-      if (lookahead == 'o') ADVANCE(69);
+      if (lookahead == 'a') ADVANCE(71);
       END_STATE();
     case 46:
-      if (lookahead == 'r') ADVANCE(70);
+      if (lookahead == 'r') ADVANCE(72);
       END_STATE();
     case 47:
-      ACCEPT_TOKEN(anon_sym_for);
-      if (lookahead == 'e') ADVANCE(71);
+      if (lookahead == 'i') ADVANCE(73);
       END_STATE();
     case 48:
-      if (lookahead == '_') ADVANCE(72);
+      if (lookahead == 'o') ADVANCE(74);
       END_STATE();
     case 49:
-      if (lookahead == 'b') ADVANCE(73);
-      END_STATE();
-    case 50:
-      if (lookahead == 'u') ADVANCE(74);
-      END_STATE();
-    case 51:
       if (lookahead == 'r') ADVANCE(75);
       END_STATE();
-    case 52:
+    case 50:
+      ACCEPT_TOKEN(anon_sym_for);
       if (lookahead == 'e') ADVANCE(76);
       END_STATE();
+    case 51:
+      if (lookahead == '_') ADVANCE(77);
+      END_STATE();
+    case 52:
+      if (lookahead == 'b') ADVANCE(78);
+      END_STATE();
     case 53:
-      if (lookahead == 'c') ADVANCE(77);
+      if (lookahead == 'u') ADVANCE(79);
       END_STATE();
     case 54:
-      if (lookahead == 's') ADVANCE(78);
+      if (lookahead == 'r') ADVANCE(80);
       END_STATE();
     case 55:
-      if (lookahead == 'e') ADVANCE(79);
+      if (lookahead == 'e') ADVANCE(81);
       END_STATE();
     case 56:
-      if (lookahead == 'o') ADVANCE(80);
+      if (lookahead == 'c') ADVANCE(82);
       END_STATE();
     case 57:
-      if (lookahead == 'u') ADVANCE(81);
+      if (lookahead == 's') ADVANCE(83);
       END_STATE();
     case 58:
-      ACCEPT_TOKEN(anon_sym_set);
-      if (lookahead == '_') ADVANCE(82);
+      if (lookahead == 'e') ADVANCE(84);
       END_STATE();
     case 59:
-      if (lookahead == 'r') ADVANCE(83);
+      if (lookahead == 'o') ADVANCE(85);
       END_STATE();
     case 60:
-      if (lookahead == 't') ADVANCE(84);
+      if (lookahead == 'e') ADVANCE(86);
       END_STATE();
     case 61:
-      ACCEPT_TOKEN(anon_sym_try);
+      if (lookahead == 'u') ADVANCE(87);
       END_STATE();
     case 62:
-      if (lookahead == 'l') ADVANCE(85);
+      ACCEPT_TOKEN(anon_sym_set);
+      if (lookahead == '_') ADVANCE(88);
       END_STATE();
     case 63:
-      if (lookahead == 'c') ADVANCE(86);
-      if (lookahead == 'i') ADVANCE(87);
-      if (lookahead == 'o') ADVANCE(88);
       if (lookahead == 'r') ADVANCE(89);
       END_STATE();
     case 64:
-      if (lookahead == 'k') ADVANCE(90);
+      if (lookahead == 't') ADVANCE(90);
       END_STATE();
     case 65:
-      if (lookahead == 'h') ADVANCE(91);
+      ACCEPT_TOKEN(anon_sym_try);
       END_STATE();
     case 66:
-      if (lookahead == 'i') ADVANCE(92);
+      if (lookahead == 'l') ADVANCE(91);
       END_STATE();
     case 67:
-      if (lookahead == 't') ADVANCE(93);
-      END_STATE();
-    case 68:
-      if (lookahead == 'e') ADVANCE(94);
-      END_STATE();
-    case 69:
+      if (lookahead == 'c') ADVANCE(92);
+      if (lookahead == 'i') ADVANCE(93);
+      if (lookahead == 'o') ADVANCE(94);
       if (lookahead == 'r') ADVANCE(95);
       END_STATE();
+    case 68:
+      if (lookahead == 'k') ADVANCE(96);
+      END_STATE();
+    case 69:
+      if (lookahead == 'h') ADVANCE(97);
+      END_STATE();
     case 70:
-      ACCEPT_TOKEN(anon_sym_expr);
+      if (lookahead == 'i') ADVANCE(98);
       END_STATE();
     case 71:
-      if (lookahead == 'a') ADVANCE(96);
+      if (lookahead == 't') ADVANCE(99);
       END_STATE();
     case 72:
-      if (lookahead == 'c') ADVANCE(97);
-      if (lookahead == 'l') ADVANCE(98);
-      if (lookahead == 'n') ADVANCE(99);
-      if (lookahead == 'p') ADVANCE(100);
+      if (lookahead == 'e') ADVANCE(100);
       END_STATE();
     case 73:
-      if (lookahead == 'a') ADVANCE(101);
+      if (lookahead == 'v') ADVANCE(101);
       END_STATE();
     case 74:
-      if (lookahead == 'p') ADVANCE(102);
+      if (lookahead == 'r') ADVANCE(102);
       END_STATE();
     case 75:
-      ACCEPT_TOKEN(anon_sym_incr);
+      ACCEPT_TOKEN(anon_sym_expr);
       END_STATE();
     case 76:
-      if (lookahead == 's') ADVANCE(103);
+      if (lookahead == 'a') ADVANCE(103);
       END_STATE();
     case 77:
-      ACCEPT_TOKEN(anon_sym_proc);
+      if (lookahead == 'a') ADVANCE(104);
+      if (lookahead == 'c') ADVANCE(105);
+      if (lookahead == 'g') ADVANCE(106);
+      if (lookahead == 'l') ADVANCE(107);
+      if (lookahead == 'n') ADVANCE(108);
+      if (lookahead == 'o') ADVANCE(109);
+      if (lookahead == 'p') ADVANCE(110);
       END_STATE();
     case 78:
-      ACCEPT_TOKEN(anon_sym_puts);
+      if (lookahead == 'a') ADVANCE(111);
       END_STATE();
     case 79:
-      if (lookahead == 'x') ADVANCE(104);
+      if (lookahead == 'p') ADVANCE(112);
       END_STATE();
     case 80:
-      if (lookahead == 'r') ADVANCE(105);
+      ACCEPT_TOKEN(anon_sym_incr);
       END_STATE();
     case 81:
-      if (lookahead == 'r') ADVANCE(106);
+      if (lookahead == 's') ADVANCE(113);
       END_STATE();
     case 82:
-      ADVANCE_MAP(
-        'c', 107,
-        'd', 108,
-        'f', 109,
-        'i', 110,
-        'l', 111,
-        'm', 112,
-        'o', 113,
-        'p', 114,
-        't', 115,
-        'u', 116,
-        'v', 117,
-        'w', 118,
-      );
+      ACCEPT_TOKEN(anon_sym_proc);
       END_STATE();
     case 83:
-      if (lookahead == 'c') ADVANCE(119);
+      ACCEPT_TOKEN(anon_sym_puts);
       END_STATE();
     case 84:
-      if (lookahead == 'c') ADVANCE(120);
+      if (lookahead == 'x') ADVANCE(114);
       END_STATE();
     case 85:
-      if (lookahead == 'e') ADVANCE(121);
+      if (lookahead == 'r') ADVANCE(115);
       END_STATE();
     case 86:
-      if (lookahead == 'l') ADVANCE(122);
+      if (lookahead == 't') ADVANCE(116);
       END_STATE();
     case 87:
-      if (lookahead == 'n') ADVANCE(123);
+      if (lookahead == 'r') ADVANCE(117);
       END_STATE();
     case 88:
-      if (lookahead == 'u') ADVANCE(124);
+      ADVANCE_MAP(
+        'a', 118,
+        'c', 119,
+        'd', 120,
+        'f', 121,
+        'h', 122,
+        'i', 123,
+        'l', 124,
+        'm', 125,
+        'o', 126,
+        'p', 127,
+        'r', 128,
+        's', 129,
+        't', 130,
+        'u', 131,
+        'v', 132,
+        'w', 133,
+      );
       END_STATE();
     case 89:
-      if (lookahead == 'e') ADVANCE(125);
+      if (lookahead == 'c') ADVANCE(134);
       END_STATE();
     case 90:
-      ACCEPT_TOKEN(sym_break);
+      if (lookahead == 'c') ADVANCE(135);
       END_STATE();
     case 91:
-      ACCEPT_TOKEN(anon_sym_catch);
+      if (lookahead == 'e') ADVANCE(136);
       END_STATE();
     case 92:
-      if (lookahead == 'n') ADVANCE(126);
+      if (lookahead == 'l') ADVANCE(137);
       END_STATE();
     case 93:
-      if (lookahead == 'e') ADVANCE(127);
+      if (lookahead == 'n') ADVANCE(138);
       END_STATE();
     case 94:
-      if (lookahead == 'n') ADVANCE(128);
+      if (lookahead == 'u') ADVANCE(139);
       END_STATE();
     case 95:
-      ACCEPT_TOKEN(anon_sym_error);
+      if (lookahead == 'e') ADVANCE(140);
       END_STATE();
     case 96:
-      if (lookahead == 'c') ADVANCE(129);
+      ACCEPT_TOKEN(sym_break);
       END_STATE();
     case 97:
-      if (lookahead == 'e') ADVANCE(130);
-      if (lookahead == 'l') ADVANCE(131);
+      ACCEPT_TOKEN(anon_sym_catch);
       END_STATE();
     case 98:
-      if (lookahead == 'i') ADVANCE(132);
-      END_STATE();
-    case 99:
-      if (lookahead == 'e') ADVANCE(133);
-      END_STATE();
-    case 100:
-      if (lookahead == 'i') ADVANCE(134);
-      if (lookahead == 'o') ADVANCE(135);
-      END_STATE();
-    case 101:
-      if (lookahead == 'l') ADVANCE(136);
-      END_STATE();
-    case 102:
-      if (lookahead == '_') ADVANCE(137);
-      END_STATE();
-    case 103:
-      if (lookahead == 'p') ADVANCE(138);
-      END_STATE();
-    case 104:
-      if (lookahead == 'p') ADVANCE(139);
-      END_STATE();
-    case 105:
-      if (lookahead == 't') ADVANCE(140);
-      END_STATE();
-    case 106:
       if (lookahead == 'n') ADVANCE(141);
       END_STATE();
+    case 99:
+      if (lookahead == 'e') ADVANCE(142);
+      END_STATE();
+    case 100:
+      if (lookahead == 'n') ADVANCE(143);
+      END_STATE();
+    case 101:
+      if (lookahead == 'e') ADVANCE(144);
+      END_STATE();
+    case 102:
+      ACCEPT_TOKEN(anon_sym_error);
+      END_STATE();
+    case 103:
+      if (lookahead == 'c') ADVANCE(145);
+      END_STATE();
+    case 104:
+      if (lookahead == 't') ADVANCE(146);
+      END_STATE();
+    case 105:
+      if (lookahead == 'e') ADVANCE(147);
+      if (lookahead == 'l') ADVANCE(148);
+      END_STATE();
+    case 106:
+      if (lookahead == 'e') ADVANCE(149);
+      END_STATE();
     case 107:
-      if (lookahead == 'a') ADVANCE(142);
-      if (lookahead == 'l') ADVANCE(143);
+      if (lookahead == 'i') ADVANCE(150);
       END_STATE();
     case 108:
-      if (lookahead == 'i') ADVANCE(144);
-      if (lookahead == 'r') ADVANCE(145);
+      if (lookahead == 'e') ADVANCE(151);
       END_STATE();
     case 109:
-      if (lookahead == 'a') ADVANCE(146);
+      if (lookahead == 'b') ADVANCE(152);
       END_STATE();
     case 110:
-      if (lookahead == 'd') ADVANCE(147);
-      if (lookahead == 'n') ADVANCE(148);
+      if (lookahead == 'i') ADVANCE(153);
+      if (lookahead == 'o') ADVANCE(154);
+      if (lookahead == 'r') ADVANCE(155);
       END_STATE();
     case 111:
-      if (lookahead == 'o') ADVANCE(149);
+      if (lookahead == 'l') ADVANCE(156);
       END_STATE();
     case 112:
-      if (lookahead == 'a') ADVANCE(150);
-      if (lookahead == 'i') ADVANCE(151);
-      if (lookahead == 'u') ADVANCE(152);
+      if (lookahead == '_') ADVANCE(157);
       END_STATE();
     case 113:
-      if (lookahead == 'p') ADVANCE(153);
-      if (lookahead == 'u') ADVANCE(154);
+      if (lookahead == 'p') ADVANCE(158);
       END_STATE();
     case 114:
-      if (lookahead == 'o') ADVANCE(155);
-      if (lookahead == 'r') ADVANCE(156);
+      if (lookahead == 'p') ADVANCE(159);
       END_STATE();
     case 115:
-      if (lookahead == 'i') ADVANCE(157);
+      if (lookahead == 't') ADVANCE(160);
       END_STATE();
     case 116:
-      if (lookahead == 'n') ADVANCE(158);
+      if (lookahead == '_') ADVANCE(161);
       END_STATE();
     case 117:
-      if (lookahead == 'o') ADVANCE(159);
+      if (lookahead == 'n') ADVANCE(162);
       END_STATE();
     case 118:
-      if (lookahead == 'i') ADVANCE(160);
+      if (lookahead == 'n') ADVANCE(163);
       END_STATE();
     case 119:
-      if (lookahead == 'e') ADVANCE(161);
+      if (lookahead == 'a') ADVANCE(164);
+      if (lookahead == 'l') ADVANCE(165);
       END_STATE();
     case 120:
-      if (lookahead == 'h') ADVANCE(162);
+      if (lookahead == 'a') ADVANCE(166);
+      if (lookahead == 'i') ADVANCE(167);
+      if (lookahead == 'r') ADVANCE(168);
       END_STATE();
     case 121:
-      ACCEPT_TOKEN(anon_sym_while);
+      if (lookahead == 'a') ADVANCE(169);
       END_STATE();
     case 122:
-      if (lookahead == 'o') ADVANCE(163);
+      if (lookahead == 'i') ADVANCE(170);
       END_STATE();
     case 123:
-      if (lookahead == 'p') ADVANCE(164);
+      if (lookahead == 'd') ADVANCE(171);
+      if (lookahead == 'n') ADVANCE(172);
       END_STATE();
     case 124:
-      if (lookahead == 't') ADVANCE(165);
+      if (lookahead == 'o') ADVANCE(173);
       END_STATE();
     case 125:
-      if (lookahead == 'g') ADVANCE(166);
+      if (lookahead == 'a') ADVANCE(174);
+      if (lookahead == 'i') ADVANCE(175);
+      if (lookahead == 'u') ADVANCE(176);
       END_STATE();
     case 126:
-      if (lookahead == 'u') ADVANCE(167);
+      if (lookahead == 'p') ADVANCE(177);
+      if (lookahead == 'u') ADVANCE(178);
       END_STATE();
     case 127:
-      if (lookahead == '_') ADVANCE(168);
+      if (lookahead == 'o') ADVANCE(179);
+      if (lookahead == 'r') ADVANCE(180);
       END_STATE();
     case 128:
-      if (lookahead == 't') ADVANCE(169);
+      if (lookahead == 'e') ADVANCE(181);
       END_STATE();
     case 129:
-      if (lookahead == 'h') ADVANCE(170);
+      if (lookahead == 'e') ADVANCE(182);
+      if (lookahead == 'l') ADVANCE(183);
+      if (lookahead == 'w') ADVANCE(184);
       END_STATE();
     case 130:
-      if (lookahead == 'l') ADVANCE(171);
+      if (lookahead == 'e') ADVANCE(185);
+      if (lookahead == 'i') ADVANCE(186);
       END_STATE();
     case 131:
-      if (lookahead == 'o') ADVANCE(172);
+      if (lookahead == 'n') ADVANCE(187);
       END_STATE();
     case 132:
-      if (lookahead == 'b') ADVANCE(173);
+      if (lookahead == 'o') ADVANCE(188);
       END_STATE();
     case 133:
-      if (lookahead == 't') ADVANCE(174);
+      if (lookahead == 'i') ADVANCE(189);
       END_STATE();
     case 134:
-      if (lookahead == 'n') ADVANCE(175);
+      if (lookahead == 'e') ADVANCE(190);
       END_STATE();
     case 135:
-      if (lookahead == 'r') ADVANCE(176);
+      if (lookahead == 'h') ADVANCE(191);
       END_STATE();
     case 136:
-      ACCEPT_TOKEN(anon_sym_global);
+      ACCEPT_TOKEN(anon_sym_while);
       END_STATE();
     case 137:
-      if (lookahead == 'p') ADVANCE(177);
+      if (lookahead == 'o') ADVANCE(192);
       END_STATE();
     case 138:
-      if (lookahead == 'a') ADVANCE(178);
+      if (lookahead == 'p') ADVANCE(193);
       END_STATE();
     case 139:
-      ACCEPT_TOKEN(anon_sym_regexp);
+      if (lookahead == 't') ADVANCE(194);
       END_STATE();
     case 140:
-      if (lookahead == '_') ADVANCE(179);
+      if (lookahead == 'g') ADVANCE(195);
       END_STATE();
     case 141:
-      ACCEPT_TOKEN(anon_sym_return);
+      if (lookahead == 'u') ADVANCE(196);
       END_STATE();
     case 142:
-      if (lookahead == 's') ADVANCE(180);
+      if (lookahead == '_') ADVANCE(197);
       END_STATE();
     case 143:
-      if (lookahead == 'o') ADVANCE(181);
+      if (lookahead == 't') ADVANCE(198);
       END_STATE();
     case 144:
-      if (lookahead == 's') ADVANCE(182);
+      if (lookahead == '_') ADVANCE(199);
       END_STATE();
     case 145:
-      if (lookahead == 'i') ADVANCE(183);
+      if (lookahead == 'h') ADVANCE(200);
       END_STATE();
     case 146:
-      if (lookahead == 'l') ADVANCE(184);
-      if (lookahead == 'n') ADVANCE(185);
+      if (lookahead == 't') ADVANCE(201);
       END_STATE();
     case 147:
-      if (lookahead == 'e') ADVANCE(186);
+      if (lookahead == 'l') ADVANCE(202);
       END_STATE();
     case 148:
-      if (lookahead == 'p') ADVANCE(187);
+      if (lookahead == 'o') ADVANCE(203);
       END_STATE();
     case 149:
-      if (lookahead == 'a') ADVANCE(188);
+      if (lookahead == 'n') ADVANCE(204);
       END_STATE();
     case 150:
-      if (lookahead == 'x') ADVANCE(189);
+      if (lookahead == 'b') ADVANCE(205);
       END_STATE();
     case 151:
-      if (lookahead == 'n') ADVANCE(190);
+      if (lookahead == 't') ADVANCE(206);
       END_STATE();
     case 152:
-      if (lookahead == 'l') ADVANCE(191);
+      if (lookahead == 'j') ADVANCE(207);
       END_STATE();
     case 153:
-      if (lookahead == 'e') ADVANCE(192);
+      if (lookahead == 'n') ADVANCE(208);
       END_STATE();
     case 154:
-      if (lookahead == 't') ADVANCE(193);
+      if (lookahead == 'r') ADVANCE(209);
       END_STATE();
     case 155:
-      if (lookahead == 'r') ADVANCE(194);
+      if (lookahead == 'o') ADVANCE(210);
       END_STATE();
     case 156:
-      if (lookahead == 'o') ADVANCE(195);
+      ACCEPT_TOKEN(anon_sym_global);
       END_STATE();
     case 157:
-      if (lookahead == 'm') ADVANCE(196);
+      if (lookahead == 'p') ADVANCE(211);
       END_STATE();
     case 158:
-      if (lookahead == 'i') ADVANCE(197);
+      if (lookahead == 'a') ADVANCE(212);
       END_STATE();
     case 159:
-      if (lookahead == 'l') ADVANCE(198);
+      ACCEPT_TOKEN(anon_sym_regexp);
       END_STATE();
     case 160:
-      if (lookahead == 'r') ADVANCE(199);
+      if (lookahead == '_') ADVANCE(213);
       END_STATE();
     case 161:
-      ACCEPT_TOKEN(anon_sym_source);
+      if (lookahead == 'd') ADVANCE(214);
       END_STATE();
     case 162:
-      ACCEPT_TOKEN(anon_sym_switch);
+      ACCEPT_TOKEN(anon_sym_return);
       END_STATE();
     case 163:
-      if (lookahead == 'c') ADVANCE(200);
+      if (lookahead == 'n') ADVANCE(215);
       END_STATE();
     case 164:
-      if (lookahead == 'u') ADVANCE(201);
+      if (lookahead == 'p') ADVANCE(216);
+      if (lookahead == 's') ADVANCE(217);
       END_STATE();
     case 165:
-      if (lookahead == 'p') ADVANCE(202);
+      if (lookahead == 'o') ADVANCE(218);
       END_STATE();
     case 166:
-      if (lookahead == 'i') ADVANCE(203);
+      if (lookahead == 't') ADVANCE(219);
       END_STATE();
     case 167:
-      if (lookahead == 'e') ADVANCE(204);
+      if (lookahead == 's') ADVANCE(220);
       END_STATE();
     case 168:
-      if (lookahead == 'c') ADVANCE(205);
-      if (lookahead == 'g') ADVANCE(206);
+      if (lookahead == 'i') ADVANCE(221);
       END_STATE();
     case 169:
-      if (lookahead == '_') ADVANCE(207);
+      if (lookahead == 'l') ADVANCE(222);
+      if (lookahead == 'n') ADVANCE(223);
       END_STATE();
     case 170:
-      ACCEPT_TOKEN(anon_sym_foreach);
+      if (lookahead == 'e') ADVANCE(224);
       END_STATE();
     case 171:
-      if (lookahead == 'l') ADVANCE(208);
+      if (lookahead == 'e') ADVANCE(225);
       END_STATE();
     case 172:
-      if (lookahead == 'c') ADVANCE(209);
+      if (lookahead == 'p') ADVANCE(226);
       END_STATE();
     case 173:
-      if (lookahead == '_') ADVANCE(210);
+      if (lookahead == 'a') ADVANCE(227);
+      if (lookahead == 'g') ADVANCE(228);
       END_STATE();
     case 174:
-      if (lookahead == 's') ADVANCE(211);
+      if (lookahead == 'x') ADVANCE(229);
       END_STATE();
     case 175:
-      if (lookahead == 's') ADVANCE(212);
+      if (lookahead == 'n') ADVANCE(230);
       END_STATE();
     case 176:
-      if (lookahead == 't') ADVANCE(213);
+      if (lookahead == 'l') ADVANCE(231);
       END_STATE();
     case 177:
-      if (lookahead == 'a') ADVANCE(214);
+      if (lookahead == 'e') ADVANCE(232);
       END_STATE();
     case 178:
-      if (lookahead == 'c') ADVANCE(215);
+      if (lookahead == 't') ADVANCE(233);
       END_STATE();
     case 179:
-      if (lookahead == 't') ADVANCE(216);
+      if (lookahead == 'r') ADVANCE(234);
       END_STATE();
     case 180:
-      if (lookahead == 'e') ADVANCE(217);
+      if (lookahead == 'o') ADVANCE(235);
       END_STATE();
     case 181:
-      if (lookahead == 'c') ADVANCE(218);
+      if (lookahead == 's') ADVANCE(236);
       END_STATE();
     case 182:
-      if (lookahead == 'a') ADVANCE(219);
+      if (lookahead == 'n') ADVANCE(237);
       END_STATE();
     case 183:
-      if (lookahead == 'v') ADVANCE(220);
+      if (lookahead == 'e') ADVANCE(238);
       END_STATE();
     case 184:
-      if (lookahead == 's') ADVANCE(221);
+      if (lookahead == 'i') ADVANCE(239);
       END_STATE();
     case 185:
-      if (lookahead == 'o') ADVANCE(222);
+      if (lookahead == 'm') ADVANCE(240);
       END_STATE();
     case 186:
-      if (lookahead == 'a') ADVANCE(223);
+      if (lookahead == 'm') ADVANCE(241);
       END_STATE();
     case 187:
-      if (lookahead == 'u') ADVANCE(224);
+      if (lookahead == 'i') ADVANCE(242);
       END_STATE();
     case 188:
-      if (lookahead == 'd') ADVANCE(225);
+      if (lookahead == 'l') ADVANCE(243);
       END_STATE();
     case 189:
-      if (lookahead == '_') ADVANCE(226);
+      if (lookahead == 'r') ADVANCE(244);
       END_STATE();
     case 190:
-      if (lookahead == '_') ADVANCE(227);
+      ACCEPT_TOKEN(anon_sym_source);
       END_STATE();
     case 191:
-      if (lookahead == 't') ADVANCE(228);
+      ACCEPT_TOKEN(anon_sym_switch);
       END_STATE();
     case 192:
-      if (lookahead == 'r') ADVANCE(229);
+      if (lookahead == 'c') ADVANCE(245);
       END_STATE();
     case 193:
-      if (lookahead == 'p') ADVANCE(230);
+      if (lookahead == 'u') ADVANCE(246);
       END_STATE();
     case 194:
-      if (lookahead == 't') ADVANCE(231);
+      if (lookahead == 'p') ADVANCE(247);
       END_STATE();
     case 195:
-      if (lookahead == 'p') ADVANCE(232);
+      if (lookahead == 'i') ADVANCE(248);
       END_STATE();
     case 196:
-      if (lookahead == 'i') ADVANCE(233);
+      if (lookahead == 'e') ADVANCE(249);
       END_STATE();
     case 197:
-      if (lookahead == 't') ADVANCE(234);
+      if (lookahead == 'c') ADVANCE(250);
+      if (lookahead == 'g') ADVANCE(251);
       END_STATE();
     case 198:
-      if (lookahead == 't') ADVANCE(235);
+      if (lookahead == '_') ADVANCE(252);
       END_STATE();
     case 199:
-      if (lookahead == 'e') ADVANCE(236);
+      if (lookahead == 'c') ADVANCE(253);
       END_STATE();
     case 200:
-      if (lookahead == 'k') ADVANCE(237);
+      ACCEPT_TOKEN(anon_sym_foreach);
       END_STATE();
     case 201:
-      if (lookahead == 't') ADVANCE(238);
+      if (lookahead == 'r') ADVANCE(254);
       END_STATE();
     case 202:
-      if (lookahead == 'u') ADVANCE(239);
+      if (lookahead == 'l') ADVANCE(255);
       END_STATE();
     case 203:
-      if (lookahead == 's') ADVANCE(240);
+      if (lookahead == 'c') ADVANCE(256);
       END_STATE();
     case 204:
-      ACCEPT_TOKEN(sym_continue);
-      END_STATE();
-    case 205:
-      if (lookahead == 'l') ADVANCE(241);
-      END_STATE();
-    case 206:
-      if (lookahead == 'e') ADVANCE(242);
-      END_STATE();
-    case 207:
-      if (lookahead == 'd') ADVANCE(243);
-      if (lookahead == 'i') ADVANCE(244);
-      END_STATE();
-    case 208:
-      if (lookahead == 's') ADVANCE(245);
-      END_STATE();
-    case 209:
-      if (lookahead == 'k') ADVANCE(246);
-      END_STATE();
-    case 210:
-      if (lookahead == 'c') ADVANCE(247);
-      if (lookahead == 'p') ADVANCE(248);
-      END_STATE();
-    case 211:
-      ACCEPT_TOKEN(anon_sym_get_nets);
-      END_STATE();
-    case 212:
-      ACCEPT_TOKEN(anon_sym_get_pins);
-      END_STATE();
-    case 213:
-      if (lookahead == 's') ADVANCE(249);
-      END_STATE();
-    case 214:
-      if (lookahead == 't') ADVANCE(250);
-      END_STATE();
-    case 215:
-      if (lookahead == 'e') ADVANCE(251);
-      END_STATE();
-    case 216:
-      if (lookahead == 'i') ADVANCE(252);
-      END_STATE();
-    case 217:
-      if (lookahead == '_') ADVANCE(253);
-      END_STATE();
-    case 218:
-      if (lookahead == 'k') ADVANCE(254);
-      END_STATE();
-    case 219:
-      if (lookahead == 'b') ADVANCE(255);
-      END_STATE();
-    case 220:
-      if (lookahead == 'i') ADVANCE(256);
-      END_STATE();
-    case 221:
       if (lookahead == 'e') ADVANCE(257);
       END_STATE();
-    case 222:
-      if (lookahead == 'u') ADVANCE(258);
+    case 205:
+      if (lookahead == '_') ADVANCE(258);
       END_STATE();
-    case 223:
-      if (lookahead == 'l') ADVANCE(259);
+    case 206:
+      if (lookahead == 's') ADVANCE(259);
       END_STATE();
-    case 224:
-      if (lookahead == 't') ADVANCE(260);
+    case 207:
+      if (lookahead == 'e') ADVANCE(260);
       END_STATE();
-    case 225:
-      ACCEPT_TOKEN(anon_sym_set_load);
+    case 208:
+      if (lookahead == 's') ADVANCE(261);
       END_STATE();
-    case 226:
-      if (lookahead == 'a') ADVANCE(261);
-      if (lookahead == 'c') ADVANCE(262);
-      if (lookahead == 'd') ADVANCE(263);
-      if (lookahead == 'f') ADVANCE(264);
-      if (lookahead == 'l') ADVANCE(265);
+    case 209:
+      if (lookahead == 't') ADVANCE(262);
+      END_STATE();
+    case 210:
+      if (lookahead == 'p') ADVANCE(263);
+      END_STATE();
+    case 211:
+      if (lookahead == 'a') ADVANCE(264);
+      END_STATE();
+    case 212:
+      if (lookahead == 'c') ADVANCE(265);
+      END_STATE();
+    case 213:
       if (lookahead == 't') ADVANCE(266);
       END_STATE();
+    case 214:
+      if (lookahead == 'e') ADVANCE(267);
+      END_STATE();
+    case 215:
+      if (lookahead == 'o') ADVANCE(268);
+      END_STATE();
+    case 216:
+      if (lookahead == 'a') ADVANCE(269);
+      END_STATE();
+    case 217:
+      if (lookahead == 'e') ADVANCE(270);
+      END_STATE();
+    case 218:
+      if (lookahead == 'c') ADVANCE(271);
+      END_STATE();
+    case 219:
+      if (lookahead == 'a') ADVANCE(272);
+      END_STATE();
+    case 220:
+      if (lookahead == 'a') ADVANCE(273);
+      END_STATE();
+    case 221:
+      if (lookahead == 'v') ADVANCE(274);
+      END_STATE();
+    case 222:
+      if (lookahead == 's') ADVANCE(275);
+      END_STATE();
+    case 223:
+      if (lookahead == 'o') ADVANCE(276);
+      END_STATE();
+    case 224:
+      if (lookahead == 'r') ADVANCE(277);
+      END_STATE();
+    case 225:
+      if (lookahead == 'a') ADVANCE(278);
+      END_STATE();
+    case 226:
+      if (lookahead == 'u') ADVANCE(279);
+      END_STATE();
     case 227:
-      if (lookahead == 'c') ADVANCE(267);
-      if (lookahead == 'd') ADVANCE(268);
-      if (lookahead == 'p') ADVANCE(269);
+      if (lookahead == 'd') ADVANCE(280);
       END_STATE();
     case 228:
-      if (lookahead == 'i') ADVANCE(270);
+      if (lookahead == 'i') ADVANCE(281);
       END_STATE();
     case 229:
-      if (lookahead == 'a') ADVANCE(271);
+      if (lookahead == '_') ADVANCE(282);
       END_STATE();
     case 230:
-      if (lookahead == 'u') ADVANCE(272);
+      if (lookahead == '_') ADVANCE(283);
       END_STATE();
     case 231:
-      if (lookahead == '_') ADVANCE(273);
+      if (lookahead == 't') ADVANCE(284);
       END_STATE();
     case 232:
-      if (lookahead == 'a') ADVANCE(274);
+      if (lookahead == 'r') ADVANCE(285);
       END_STATE();
     case 233:
-      if (lookahead == 'n') ADVANCE(275);
+      if (lookahead == 'p') ADVANCE(286);
       END_STATE();
     case 234:
-      if (lookahead == 's') ADVANCE(276);
+      if (lookahead == 't') ADVANCE(287);
       END_STATE();
     case 235:
-      if (lookahead == 'a') ADVANCE(277);
+      if (lookahead == 'p') ADVANCE(288);
       END_STATE();
     case 236:
-      if (lookahead == '_') ADVANCE(278);
-      END_STATE();
-    case 237:
-      if (lookahead == 's') ADVANCE(279);
-      END_STATE();
-    case 238:
-      if (lookahead == 's') ADVANCE(280);
-      END_STATE();
-    case 239:
-      if (lookahead == 't') ADVANCE(281);
-      END_STATE();
-    case 240:
-      if (lookahead == 't') ADVANCE(282);
-      END_STATE();
-    case 241:
-      if (lookahead == 'o') ADVANCE(283);
-      END_STATE();
-    case 242:
-      if (lookahead == 'n') ADVANCE(284);
-      END_STATE();
-    case 243:
-      if (lookahead == 'e') ADVANCE(285);
-      END_STATE();
-    case 244:
-      if (lookahead == 'n') ADVANCE(286);
-      END_STATE();
-    case 245:
-      ACCEPT_TOKEN(anon_sym_get_cells);
-      END_STATE();
-    case 246:
-      if (lookahead == 's') ADVANCE(287);
-      END_STATE();
-    case 247:
-      if (lookahead == 'e') ADVANCE(288);
-      END_STATE();
-    case 248:
       if (lookahead == 'i') ADVANCE(289);
       END_STATE();
+    case 237:
+      if (lookahead == 's') ADVANCE(290);
+      END_STATE();
+    case 238:
+      if (lookahead == 'w') ADVANCE(291);
+      END_STATE();
+    case 239:
+      if (lookahead == 't') ADVANCE(292);
+      END_STATE();
+    case 240:
+      if (lookahead == 'p') ADVANCE(293);
+      END_STATE();
+    case 241:
+      if (lookahead == 'i') ADVANCE(294);
+      END_STATE();
+    case 242:
+      if (lookahead == 't') ADVANCE(295);
+      END_STATE();
+    case 243:
+      if (lookahead == 't') ADVANCE(296);
+      END_STATE();
+    case 244:
+      if (lookahead == 'e') ADVANCE(297);
+      END_STATE();
+    case 245:
+      if (lookahead == 'k') ADVANCE(298);
+      END_STATE();
+    case 246:
+      if (lookahead == 't') ADVANCE(299);
+      END_STATE();
+    case 247:
+      if (lookahead == 'u') ADVANCE(300);
+      END_STATE();
+    case 248:
+      if (lookahead == 's') ADVANCE(301);
+      END_STATE();
     case 249:
-      ACCEPT_TOKEN(anon_sym_get_ports);
+      ACCEPT_TOKEN(sym_continue);
       END_STATE();
     case 250:
-      if (lookahead == 'h') ADVANCE(290);
+      if (lookahead == 'l') ADVANCE(302);
       END_STATE();
     case 251:
-      ACCEPT_TOKEN(anon_sym_namespace);
+      if (lookahead == 'e') ADVANCE(303);
       END_STATE();
     case 252:
-      if (lookahead == 'm') ADVANCE(291);
+      if (lookahead == 'd') ADVANCE(304);
+      if (lookahead == 'i') ADVANCE(305);
       END_STATE();
     case 253:
-      if (lookahead == 'a') ADVANCE(292);
+      if (lookahead == 'l') ADVANCE(306);
       END_STATE();
     case 254:
-      if (lookahead == '_') ADVANCE(293);
+      if (lookahead == 'i') ADVANCE(307);
       END_STATE();
     case 255:
-      if (lookahead == 'l') ADVANCE(294);
+      if (lookahead == 's') ADVANCE(308);
       END_STATE();
     case 256:
-      if (lookahead == 'n') ADVANCE(295);
+      if (lookahead == 'k') ADVANCE(309);
       END_STATE();
     case 257:
-      if (lookahead == '_') ADVANCE(296);
+      if (lookahead == 'r') ADVANCE(310);
       END_STATE();
     case 258:
-      if (lookahead == 't') ADVANCE(297);
+      if (lookahead == 'c') ADVANCE(311);
+      if (lookahead == 'p') ADVANCE(312);
       END_STATE();
     case 259:
-      if (lookahead == '_') ADVANCE(298);
+      ACCEPT_TOKEN(anon_sym_get_nets);
       END_STATE();
     case 260:
-      if (lookahead == '_') ADVANCE(299);
+      if (lookahead == 'c') ADVANCE(313);
       END_STATE();
     case 261:
-      if (lookahead == 'r') ADVANCE(300);
+      ACCEPT_TOKEN(anon_sym_get_pins);
       END_STATE();
     case 262:
-      if (lookahead == 'a') ADVANCE(301);
+      if (lookahead == 's') ADVANCE(314);
       END_STATE();
     case 263:
-      if (lookahead == 'e') ADVANCE(302);
-      if (lookahead == 'y') ADVANCE(303);
+      if (lookahead == 'e') ADVANCE(315);
       END_STATE();
     case 264:
-      if (lookahead == 'a') ADVANCE(304);
+      if (lookahead == 't') ADVANCE(316);
       END_STATE();
     case 265:
-      if (lookahead == 'e') ADVANCE(305);
+      if (lookahead == 'e') ADVANCE(317);
       END_STATE();
     case 266:
-      if (lookahead == 'i') ADVANCE(306);
-      if (lookahead == 'r') ADVANCE(307);
+      if (lookahead == 'i') ADVANCE(318);
       END_STATE();
     case 267:
-      if (lookahead == 'a') ADVANCE(308);
-      END_STATE();
-    case 268:
-      if (lookahead == 'e') ADVANCE(309);
-      END_STATE();
-    case 269:
-      if (lookahead == 'u') ADVANCE(310);
-      END_STATE();
-    case 270:
-      if (lookahead == 'c') ADVANCE(311);
-      END_STATE();
-    case 271:
-      if (lookahead == 't') ADVANCE(312);
-      END_STATE();
-    case 272:
-      if (lookahead == 't') ADVANCE(313);
-      END_STATE();
-    case 273:
-      if (lookahead == 'f') ADVANCE(314);
-      END_STATE();
-    case 274:
-      if (lookahead == 'g') ADVANCE(315);
-      END_STATE();
-    case 275:
-      if (lookahead == 'g') ADVANCE(316);
-      END_STATE();
-    case 276:
-      ACCEPT_TOKEN(anon_sym_set_units);
-      END_STATE();
-    case 277:
-      if (lookahead == 'g') ADVANCE(317);
-      END_STATE();
-    case 278:
-      if (lookahead == 'l') ADVANCE(318);
-      END_STATE();
-    case 279:
-      ACCEPT_TOKEN(anon_sym_all_clocks);
-      END_STATE();
-    case 280:
-      ACCEPT_TOKEN(anon_sym_all_inputs);
-      END_STATE();
-    case 281:
       if (lookahead == 's') ADVANCE(319);
       END_STATE();
-    case 282:
-      if (lookahead == 'e') ADVANCE(320);
+    case 268:
+      if (lookahead == 't') ADVANCE(320);
       END_STATE();
-    case 283:
+    case 269:
       if (lookahead == 'c') ADVANCE(321);
       END_STATE();
-    case 284:
-      if (lookahead == 'e') ADVANCE(322);
+    case 270:
+      if (lookahead == '_') ADVANCE(322);
       END_STATE();
-    case 285:
-      if (lookahead == 's') ADVANCE(323);
+    case 271:
+      if (lookahead == 'k') ADVANCE(323);
       END_STATE();
-    case 286:
-      if (lookahead == 's') ADVANCE(324);
+    case 272:
+      if (lookahead == '_') ADVANCE(324);
       END_STATE();
-    case 287:
-      ACCEPT_TOKEN(anon_sym_get_clocks);
+    case 273:
+      if (lookahead == 'b') ADVANCE(325);
       END_STATE();
-    case 288:
-      if (lookahead == 'l') ADVANCE(325);
+    case 274:
+      if (lookahead == 'i') ADVANCE(326);
       END_STATE();
-    case 289:
-      if (lookahead == 'n') ADVANCE(326);
+    case 275:
+      if (lookahead == 'e') ADVANCE(327);
       END_STATE();
-    case 290:
-      ACCEPT_TOKEN(anon_sym_group_path);
+    case 276:
+      if (lookahead == 'u') ADVANCE(328);
       END_STATE();
-    case 291:
-      if (lookahead == 'i') ADVANCE(327);
+    case 277:
+      if (lookahead == 'a') ADVANCE(329);
       END_STATE();
-    case 292:
-      if (lookahead == 'n') ADVANCE(328);
-      END_STATE();
-    case 293:
-      if (lookahead == 'g') ADVANCE(329);
+    case 278:
       if (lookahead == 'l') ADVANCE(330);
+      END_STATE();
+    case 279:
       if (lookahead == 't') ADVANCE(331);
-      if (lookahead == 'u') ADVANCE(332);
       END_STATE();
-    case 294:
-      if (lookahead == 'e') ADVANCE(333);
+    case 280:
+      ACCEPT_TOKEN(anon_sym_set_load);
       END_STATE();
-    case 295:
-      if (lookahead == 'g') ADVANCE(334);
+    case 281:
+      if (lookahead == 'c') ADVANCE(332);
       END_STATE();
-    case 296:
-      if (lookahead == 'p') ADVANCE(335);
-      END_STATE();
-    case 297:
-      if (lookahead == '_') ADVANCE(336);
-      END_STATE();
-    case 298:
+    case 282:
+      if (lookahead == 'a') ADVANCE(333);
+      if (lookahead == 'c') ADVANCE(334);
+      if (lookahead == 'd') ADVANCE(335);
+      if (lookahead == 'f') ADVANCE(336);
       if (lookahead == 'l') ADVANCE(337);
-      if (lookahead == 'n') ADVANCE(338);
+      if (lookahead == 's') ADVANCE(338);
       if (lookahead == 't') ADVANCE(339);
       END_STATE();
-    case 299:
-      if (lookahead == 'd') ADVANCE(340);
-      if (lookahead == 't') ADVANCE(341);
+    case 283:
+      if (lookahead == 'c') ADVANCE(340);
+      if (lookahead == 'd') ADVANCE(341);
+      if (lookahead == 'p') ADVANCE(342);
       END_STATE();
-    case 300:
-      if (lookahead == 'e') ADVANCE(342);
+    case 284:
+      if (lookahead == 'i') ADVANCE(343);
       END_STATE();
-    case 301:
-      if (lookahead == 'p') ADVANCE(343);
+    case 285:
+      if (lookahead == 'a') ADVANCE(344);
       END_STATE();
-    case 302:
-      if (lookahead == 'l') ADVANCE(344);
+    case 286:
+      if (lookahead == 'u') ADVANCE(345);
       END_STATE();
-    case 303:
-      if (lookahead == 'n') ADVANCE(345);
+    case 287:
+      if (lookahead == '_') ADVANCE(346);
       END_STATE();
-    case 304:
-      if (lookahead == 'n') ADVANCE(346);
-      END_STATE();
-    case 305:
+    case 288:
       if (lookahead == 'a') ADVANCE(347);
       END_STATE();
+    case 289:
+      if (lookahead == 's') ADVANCE(348);
+      END_STATE();
+    case 290:
+      if (lookahead == 'e') ADVANCE(349);
+      END_STATE();
+    case 291:
+      if (lookahead == '_') ADVANCE(350);
+      END_STATE();
+    case 292:
+      if (lookahead == 'c') ADVANCE(351);
+      END_STATE();
+    case 293:
+      if (lookahead == 'e') ADVANCE(352);
+      END_STATE();
+    case 294:
+      if (lookahead == 'n') ADVANCE(353);
+      END_STATE();
+    case 295:
+      if (lookahead == 's') ADVANCE(354);
+      END_STATE();
+    case 296:
+      if (lookahead == 'a') ADVANCE(355);
+      END_STATE();
+    case 297:
+      if (lookahead == '_') ADVANCE(356);
+      END_STATE();
+    case 298:
+      if (lookahead == 's') ADVANCE(357);
+      END_STATE();
+    case 299:
+      if (lookahead == 's') ADVANCE(358);
+      END_STATE();
+    case 300:
+      if (lookahead == 't') ADVANCE(359);
+      END_STATE();
+    case 301:
+      if (lookahead == 't') ADVANCE(360);
+      END_STATE();
+    case 302:
+      if (lookahead == 'o') ADVANCE(361);
+      END_STATE();
+    case 303:
+      if (lookahead == 'n') ADVANCE(362);
+      END_STATE();
+    case 304:
+      if (lookahead == 'e') ADVANCE(363);
+      END_STATE();
+    case 305:
+      if (lookahead == 'n') ADVANCE(364);
+      END_STATE();
     case 306:
-      if (lookahead == 'm') ADVANCE(348);
+      if (lookahead == 'o') ADVANCE(365);
       END_STATE();
     case 307:
-      if (lookahead == 'a') ADVANCE(349);
+      if (lookahead == 'b') ADVANCE(366);
       END_STATE();
     case 308:
-      if (lookahead == 'p') ADVANCE(350);
+      ACCEPT_TOKEN(anon_sym_get_cells);
       END_STATE();
     case 309:
-      if (lookahead == 'l') ADVANCE(351);
-      END_STATE();
-    case 310:
-      if (lookahead == 'l') ADVANCE(352);
-      END_STATE();
-    case 311:
-      if (lookahead == 'y') ADVANCE(353);
-      END_STATE();
-    case 312:
-      if (lookahead == 'i') ADVANCE(354);
-      END_STATE();
-    case 313:
-      if (lookahead == '_') ADVANCE(355);
-      END_STATE();
-    case 314:
-      if (lookahead == 'a') ADVANCE(356);
-      END_STATE();
-    case 315:
-      if (lookahead == 'a') ADVANCE(357);
-      END_STATE();
-    case 316:
-      if (lookahead == '_') ADVANCE(358);
-      END_STATE();
-    case 317:
-      if (lookahead == 'e') ADVANCE(359);
-      END_STATE();
-    case 318:
-      if (lookahead == 'o') ADVANCE(360);
-      END_STATE();
-    case 319:
-      ACCEPT_TOKEN(anon_sym_all_outputs);
-      END_STATE();
-    case 320:
-      if (lookahead == 'r') ADVANCE(361);
-      END_STATE();
-    case 321:
-      if (lookahead == 'k') ADVANCE(362);
-      END_STATE();
-    case 322:
-      if (lookahead == 'r') ADVANCE(363);
-      END_STATE();
-    case 323:
-      if (lookahead == 'i') ADVANCE(364);
-      END_STATE();
-    case 324:
-      if (lookahead == 't') ADVANCE(365);
-      END_STATE();
-    case 325:
-      if (lookahead == 'l') ADVANCE(366);
-      END_STATE();
-    case 326:
       if (lookahead == 's') ADVANCE(367);
       END_STATE();
-    case 327:
-      if (lookahead == 'n') ADVANCE(368);
+    case 310:
+      if (lookahead == 'a') ADVANCE(368);
       END_STATE();
-    case 328:
-      if (lookahead == 'a') ADVANCE(369);
+    case 311:
+      if (lookahead == 'e') ADVANCE(369);
       END_STATE();
-    case 329:
-      if (lookahead == 'r') ADVANCE(370);
+    case 312:
+      if (lookahead == 'i') ADVANCE(370);
       END_STATE();
-    case 330:
-      if (lookahead == 'a') ADVANCE(371);
+    case 313:
+      if (lookahead == 't') ADVANCE(371);
       END_STATE();
-    case 331:
+    case 314:
+      ACCEPT_TOKEN(anon_sym_get_ports);
+      END_STATE();
+    case 315:
       if (lookahead == 'r') ADVANCE(372);
       END_STATE();
-    case 332:
-      if (lookahead == 'n') ADVANCE(373);
+    case 316:
+      if (lookahead == 'h') ADVANCE(373);
       END_STATE();
-    case 333:
-      if (lookahead == '_') ADVANCE(374);
+    case 317:
+      ACCEPT_TOKEN(anon_sym_namespace);
       END_STATE();
-    case 334:
-      if (lookahead == '_') ADVANCE(375);
+    case 318:
+      if (lookahead == 'm') ADVANCE(374);
       END_STATE();
-    case 335:
+    case 319:
+      if (lookahead == 'i') ADVANCE(375);
+      END_STATE();
+    case 320:
       if (lookahead == 'a') ADVANCE(376);
       END_STATE();
-    case 336:
-      if (lookahead == 'l') ADVANCE(377);
+    case 321:
+      if (lookahead == 'i') ADVANCE(377);
       END_STATE();
-    case 337:
+    case 322:
       if (lookahead == 'a') ADVANCE(378);
       END_STATE();
+    case 323:
+      if (lookahead == '_') ADVANCE(379);
+      END_STATE();
+    case 324:
+      if (lookahead == 'c') ADVANCE(380);
+      END_STATE();
+    case 325:
+      if (lookahead == 'l') ADVANCE(381);
+      END_STATE();
+    case 326:
+      if (lookahead == 'n') ADVANCE(382);
+      END_STATE();
+    case 327:
+      if (lookahead == '_') ADVANCE(383);
+      END_STATE();
+    case 328:
+      if (lookahead == 't') ADVANCE(384);
+      END_STATE();
+    case 329:
+      if (lookahead == 'r') ADVANCE(385);
+      END_STATE();
+    case 330:
+      if (lookahead == '_') ADVANCE(386);
+      END_STATE();
+    case 331:
+      if (lookahead == '_') ADVANCE(387);
+      END_STATE();
+    case 332:
+      if (lookahead == '_') ADVANCE(388);
+      END_STATE();
+    case 333:
+      if (lookahead == 'r') ADVANCE(389);
+      END_STATE();
+    case 334:
+      if (lookahead == 'a') ADVANCE(390);
+      END_STATE();
+    case 335:
+      if (lookahead == 'e') ADVANCE(391);
+      if (lookahead == 'y') ADVANCE(392);
+      END_STATE();
+    case 336:
+      if (lookahead == 'a') ADVANCE(393);
+      END_STATE();
+    case 337:
+      if (lookahead == 'e') ADVANCE(394);
+      END_STATE();
     case 338:
-      if (lookahead == 'e') ADVANCE(379);
+      if (lookahead == 'k') ADVANCE(395);
       END_STATE();
     case 339:
-      if (lookahead == 'r') ADVANCE(380);
+      if (lookahead == 'i') ADVANCE(396);
+      if (lookahead == 'r') ADVANCE(397);
       END_STATE();
     case 340:
-      if (lookahead == 'e') ADVANCE(381);
+      if (lookahead == 'a') ADVANCE(398);
       END_STATE();
     case 341:
-      if (lookahead == 'r') ADVANCE(382);
+      if (lookahead == 'e') ADVANCE(399);
       END_STATE();
     case 342:
-      if (lookahead == 'a') ADVANCE(383);
+      if (lookahead == 'u') ADVANCE(400);
       END_STATE();
     case 343:
-      if (lookahead == 'a') ADVANCE(384);
+      if (lookahead == 'c') ADVANCE(401);
       END_STATE();
     case 344:
-      if (lookahead == 'a') ADVANCE(385);
+      if (lookahead == 't') ADVANCE(402);
       END_STATE();
     case 345:
-      if (lookahead == 'a') ADVANCE(386);
+      if (lookahead == 't') ADVANCE(403);
       END_STATE();
     case 346:
-      if (lookahead == 'o') ADVANCE(387);
+      if (lookahead == 'f') ADVANCE(404);
       END_STATE();
     case 347:
-      if (lookahead == 'k') ADVANCE(388);
+      if (lookahead == 'g') ADVANCE(405);
       END_STATE();
     case 348:
-      if (lookahead == 'e') ADVANCE(389);
+      if (lookahead == 't') ADVANCE(406);
       END_STATE();
     case 349:
-      if (lookahead == 'n') ADVANCE(390);
+      ACCEPT_TOKEN(anon_sym_set_sense);
       END_STATE();
     case 350:
-      if (lookahead == 'a') ADVANCE(391);
+      if (lookahead == 'd') ADVANCE(407);
       END_STATE();
     case 351:
-      if (lookahead == 'a') ADVANCE(392);
+      if (lookahead == 'h') ADVANCE(408);
       END_STATE();
     case 352:
-      if (lookahead == 's') ADVANCE(393);
+      if (lookahead == 'r') ADVANCE(409);
       END_STATE();
     case 353:
-      if (lookahead == 'c') ADVANCE(394);
+      if (lookahead == 'g') ADVANCE(410);
       END_STATE();
     case 354:
-      if (lookahead == 'n') ADVANCE(395);
+      ACCEPT_TOKEN(anon_sym_set_units);
       END_STATE();
     case 355:
-      if (lookahead == 'd') ADVANCE(396);
+      if (lookahead == 'g') ADVANCE(411);
       END_STATE();
     case 356:
-      if (lookahead == 'n') ADVANCE(397);
+      if (lookahead == 'l') ADVANCE(412);
       END_STATE();
     case 357:
-      if (lookahead == 't') ADVANCE(398);
+      ACCEPT_TOKEN(anon_sym_all_clocks);
       END_STATE();
     case 358:
-      if (lookahead == 'd') ADVANCE(399);
+      ACCEPT_TOKEN(anon_sym_all_inputs);
       END_STATE();
     case 359:
-      ACCEPT_TOKEN(anon_sym_set_voltage);
+      if (lookahead == 's') ADVANCE(413);
       END_STATE();
     case 360:
-      if (lookahead == 'a') ADVANCE(400);
+      if (lookahead == 'e') ADVANCE(414);
       END_STATE();
     case 361:
-      if (lookahead == 's') ADVANCE(401);
+      if (lookahead == 'c') ADVANCE(415);
       END_STATE();
     case 362:
-      ACCEPT_TOKEN(anon_sym_create_clock);
+      if (lookahead == 'e') ADVANCE(416);
       END_STATE();
     case 363:
-      if (lookahead == 'a') ADVANCE(402);
+      if (lookahead == 's') ADVANCE(417);
       END_STATE();
     case 364:
-      if (lookahead == 'g') ADVANCE(403);
+      if (lookahead == 's') ADVANCE(418);
       END_STATE();
     case 365:
-      if (lookahead == 'a') ADVANCE(404);
+      if (lookahead == 'c') ADVANCE(419);
       END_STATE();
     case 366:
-      if (lookahead == 's') ADVANCE(405);
+      if (lookahead == 'u') ADVANCE(420);
       END_STATE();
     case 367:
-      ACCEPT_TOKEN(anon_sym_get_lib_pins);
+      ACCEPT_TOKEN(anon_sym_get_clocks);
       END_STATE();
     case 368:
-      if (lookahead == 'g') ADVANCE(406);
+      if (lookahead == 't') ADVANCE(421);
       END_STATE();
     case 369:
-      if (lookahead == 'l') ADVANCE(407);
+      if (lookahead == 'l') ADVANCE(422);
       END_STATE();
     case 370:
-      if (lookahead == 'o') ADVANCE(408);
+      if (lookahead == 'n') ADVANCE(423);
       END_STATE();
     case 371:
-      if (lookahead == 't') ADVANCE(409);
+      if (lookahead == '_') ADVANCE(424);
       END_STATE();
     case 372:
-      if (lookahead == 'a') ADVANCE(410);
+      if (lookahead == 't') ADVANCE(425);
       END_STATE();
     case 373:
-      if (lookahead == 'c') ADVANCE(411);
+      ACCEPT_TOKEN(anon_sym_group_path);
       END_STATE();
     case 374:
-      if (lookahead == 't') ADVANCE(412);
+      if (lookahead == 'i') ADVANCE(426);
       END_STATE();
     case 375:
-      if (lookahead == 'c') ADVANCE(413);
+      if (lookahead == 'g') ADVANCE(427);
       END_STATE();
     case 376:
-      if (lookahead == 't') ADVANCE(414);
+      if (lookahead == 't') ADVANCE(428);
       END_STATE();
     case 377:
-      if (lookahead == 'o') ADVANCE(415);
+      if (lookahead == 't') ADVANCE(429);
       END_STATE();
     case 378:
-      if (lookahead == 't') ADVANCE(416);
+      if (lookahead == 'n') ADVANCE(430);
       END_STATE();
     case 379:
-      if (lookahead == 't') ADVANCE(417);
+      if (lookahead == 'g') ADVANCE(431);
+      if (lookahead == 'l') ADVANCE(432);
+      if (lookahead == 's') ADVANCE(433);
+      if (lookahead == 't') ADVANCE(434);
+      if (lookahead == 'u') ADVANCE(435);
       END_STATE();
     case 380:
-      if (lookahead == 'a') ADVANCE(418);
+      if (lookahead == 'h') ADVANCE(436);
       END_STATE();
     case 381:
-      if (lookahead == 'l') ADVANCE(419);
+      if (lookahead == 'e') ADVANCE(437);
       END_STATE();
     case 382:
-      if (lookahead == 'a') ADVANCE(420);
+      if (lookahead == 'g') ADVANCE(438);
       END_STATE();
     case 383:
-      ACCEPT_TOKEN(anon_sym_set_max_area);
+      if (lookahead == 'p') ADVANCE(439);
       END_STATE();
     case 384:
-      if (lookahead == 'c') ADVANCE(421);
+      if (lookahead == '_') ADVANCE(440);
       END_STATE();
     case 385:
-      if (lookahead == 'y') ADVANCE(422);
+      if (lookahead == 'c') ADVANCE(441);
       END_STATE();
     case 386:
-      if (lookahead == 'm') ADVANCE(423);
+      if (lookahead == 'l') ADVANCE(442);
+      if (lookahead == 'n') ADVANCE(443);
+      if (lookahead == 't') ADVANCE(444);
       END_STATE();
     case 387:
-      if (lookahead == 'u') ADVANCE(424);
+      if (lookahead == 'd') ADVANCE(445);
+      if (lookahead == 't') ADVANCE(446);
       END_STATE();
     case 388:
-      if (lookahead == 'a') ADVANCE(425);
+      if (lookahead == 'd') ADVANCE(447);
+      if (lookahead == 'o') ADVANCE(448);
+      if (lookahead == 'z') ADVANCE(449);
       END_STATE();
     case 389:
-      if (lookahead == '_') ADVANCE(426);
-      END_STATE();
-    case 390:
-      if (lookahead == 's') ADVANCE(427);
-      END_STATE();
-    case 391:
-      if (lookahead == 'c') ADVANCE(428);
-      END_STATE();
-    case 392:
-      if (lookahead == 'y') ADVANCE(429);
-      END_STATE();
-    case 393:
-      if (lookahead == 'e') ADVANCE(430);
-      END_STATE();
-    case 394:
-      if (lookahead == 'l') ADVANCE(431);
-      END_STATE();
-    case 395:
-      if (lookahead == 'g') ADVANCE(432);
-      END_STATE();
-    case 396:
-      if (lookahead == 'e') ADVANCE(433);
-      END_STATE();
-    case 397:
-      if (lookahead == 'o') ADVANCE(434);
-      END_STATE();
-    case 398:
-      if (lookahead == 'e') ADVANCE(435);
-      END_STATE();
-    case 399:
-      if (lookahead == 'e') ADVANCE(436);
-      END_STATE();
-    case 400:
-      if (lookahead == 'd') ADVANCE(437);
-      END_STATE();
-    case 401:
-      ACCEPT_TOKEN(anon_sym_all_registers);
-      END_STATE();
-    case 402:
-      if (lookahead == 't') ADVANCE(438);
-      END_STATE();
-    case 403:
-      if (lookahead == 'n') ADVANCE(439);
-      END_STATE();
-    case 404:
-      if (lookahead == 'n') ADVANCE(440);
-      END_STATE();
-    case 405:
-      ACCEPT_TOKEN(anon_sym_get_lib_cells);
-      END_STATE();
-    case 406:
-      ACCEPT_TOKEN(anon_sym_report_timing);
-      END_STATE();
-    case 407:
-      if (lookahead == 'y') ADVANCE(441);
-      END_STATE();
-    case 408:
-      if (lookahead == 'u') ADVANCE(442);
-      END_STATE();
-    case 409:
-      if (lookahead == 'e') ADVANCE(443);
-      END_STATE();
-    case 410:
-      if (lookahead == 'n') ADVANCE(444);
-      END_STATE();
-    case 411:
-      if (lookahead == 'e') ADVANCE(445);
-      END_STATE();
-    case 412:
-      if (lookahead == 'i') ADVANCE(446);
-      END_STATE();
-    case 413:
-      if (lookahead == 'e') ADVANCE(447);
-      END_STATE();
-    case 414:
-      if (lookahead == 'h') ADVANCE(448);
-      END_STATE();
-    case 415:
-      if (lookahead == 'a') ADVANCE(449);
-      END_STATE();
-    case 416:
       if (lookahead == 'e') ADVANCE(450);
       END_STATE();
-    case 417:
-      if (lookahead == 'w') ADVANCE(451);
+    case 390:
+      if (lookahead == 'p') ADVANCE(451);
       END_STATE();
-    case 418:
-      if (lookahead == 'n') ADVANCE(452);
+    case 391:
+      if (lookahead == 'l') ADVANCE(452);
       END_STATE();
-    case 419:
-      if (lookahead == 'a') ADVANCE(453);
+    case 392:
+      if (lookahead == 'n') ADVANCE(453);
       END_STATE();
-    case 420:
+    case 393:
       if (lookahead == 'n') ADVANCE(454);
       END_STATE();
-    case 421:
-      if (lookahead == 'i') ADVANCE(455);
+    case 394:
+      if (lookahead == 'a') ADVANCE(455);
       END_STATE();
-    case 422:
-      ACCEPT_TOKEN(anon_sym_set_max_delay);
+    case 395:
+      if (lookahead == 'e') ADVANCE(456);
       END_STATE();
-    case 423:
-      if (lookahead == 'i') ADVANCE(456);
+    case 396:
+      if (lookahead == 'm') ADVANCE(457);
       END_STATE();
-    case 424:
-      if (lookahead == 't') ADVANCE(457);
+    case 397:
+      if (lookahead == 'a') ADVANCE(458);
       END_STATE();
-    case 425:
-      if (lookahead == 'g') ADVANCE(458);
+    case 398:
+      if (lookahead == 'p') ADVANCE(459);
       END_STATE();
-    case 426:
-      if (lookahead == 'b') ADVANCE(459);
+    case 399:
+      if (lookahead == 'l') ADVANCE(460);
       END_STATE();
-    case 427:
-      if (lookahead == 'i') ADVANCE(460);
+    case 400:
+      if (lookahead == 'l') ADVANCE(461);
       END_STATE();
-    case 428:
-      if (lookahead == 'i') ADVANCE(461);
+    case 401:
+      if (lookahead == 'y') ADVANCE(462);
       END_STATE();
-    case 429:
-      ACCEPT_TOKEN(anon_sym_set_min_delay);
+    case 402:
+      if (lookahead == 'i') ADVANCE(463);
       END_STATE();
-    case 430:
-      if (lookahead == '_') ADVANCE(462);
-      END_STATE();
-    case 431:
-      if (lookahead == 'e') ADVANCE(463);
-      END_STATE();
-    case 432:
+    case 403:
       if (lookahead == '_') ADVANCE(464);
       END_STATE();
-    case 433:
-      if (lookahead == 'l') ADVANCE(465);
+    case 404:
+      if (lookahead == 'a') ADVANCE(465);
       END_STATE();
-    case 434:
-      if (lookahead == 'u') ADVANCE(466);
+    case 405:
+      if (lookahead == 'a') ADVANCE(466);
       END_STATE();
-    case 435:
-      if (lookahead == 'd') ADVANCE(467);
+    case 406:
+      if (lookahead == 'a') ADVANCE(467);
       END_STATE();
-    case 436:
-      if (lookahead == 'r') ADVANCE(468);
+    case 407:
+      if (lookahead == 'e') ADVANCE(468);
       END_STATE();
-    case 437:
-      if (lookahead == '_') ADVANCE(469);
+    case 408:
+      if (lookahead == 'i') ADVANCE(469);
       END_STATE();
-    case 438:
-      if (lookahead == 'e') ADVANCE(470);
+    case 409:
+      if (lookahead == 'a') ADVANCE(470);
       END_STATE();
-    case 439:
-      ACCEPT_TOKEN(anon_sym_current_design);
+    case 410:
+      if (lookahead == '_') ADVANCE(471);
       END_STATE();
-    case 440:
-      if (lookahead == 'c') ADVANCE(471);
+    case 411:
+      if (lookahead == 'e') ADVANCE(472);
       END_STATE();
-    case 441:
-      if (lookahead == 's') ADVANCE(472);
+    case 412:
+      if (lookahead == 'o') ADVANCE(473);
       END_STATE();
-    case 442:
-      if (lookahead == 'p') ADVANCE(473);
+    case 413:
+      ACCEPT_TOKEN(anon_sym_all_outputs);
       END_STATE();
-    case 443:
-      if (lookahead == 'n') ADVANCE(474);
+    case 414:
+      if (lookahead == 'r') ADVANCE(474);
       END_STATE();
-    case 444:
-      if (lookahead == 's') ADVANCE(475);
+    case 415:
+      if (lookahead == 'k') ADVANCE(475);
       END_STATE();
-    case 445:
+    case 416:
       if (lookahead == 'r') ADVANCE(476);
       END_STATE();
+    case 417:
+      if (lookahead == 'i') ADVANCE(477);
+      END_STATE();
+    case 418:
+      if (lookahead == 't') ADVANCE(478);
+      END_STATE();
+    case 419:
+      if (lookahead == 'k') ADVANCE(479);
+      END_STATE();
+    case 420:
+      if (lookahead == 't') ADVANCE(480);
+      END_STATE();
+    case 421:
+      if (lookahead == 'e') ADVANCE(481);
+      END_STATE();
+    case 422:
+      if (lookahead == 'l') ADVANCE(482);
+      END_STATE();
+    case 423:
+      if (lookahead == 's') ADVANCE(483);
+      END_STATE();
+    case 424:
+      if (lookahead == 'n') ADVANCE(484);
+      END_STATE();
+    case 425:
+      if (lookahead == 'y') ADVANCE(485);
+      END_STATE();
+    case 426:
+      if (lookahead == 'n') ADVANCE(486);
+      END_STATE();
+    case 427:
+      if (lookahead == 'n') ADVANCE(487);
+      END_STATE();
+    case 428:
+      if (lookahead == 'e') ADVANCE(488);
+      END_STATE();
+    case 429:
+      if (lookahead == 'a') ADVANCE(489);
+      END_STATE();
+    case 430:
+      if (lookahead == 'a') ADVANCE(490);
+      END_STATE();
+    case 431:
+      if (lookahead == 'r') ADVANCE(491);
+      END_STATE();
+    case 432:
+      if (lookahead == 'a') ADVANCE(492);
+      END_STATE();
+    case 433:
+      if (lookahead == 'e') ADVANCE(493);
+      END_STATE();
+    case 434:
+      if (lookahead == 'r') ADVANCE(494);
+      END_STATE();
+    case 435:
+      if (lookahead == 'n') ADVANCE(495);
+      END_STATE();
+    case 436:
+      if (lookahead == 'e') ADVANCE(496);
+      END_STATE();
+    case 437:
+      if (lookahead == '_') ADVANCE(497);
+      END_STATE();
+    case 438:
+      if (lookahead == '_') ADVANCE(498);
+      END_STATE();
+    case 439:
+      if (lookahead == 'a') ADVANCE(499);
+      END_STATE();
+    case 440:
+      if (lookahead == 'l') ADVANCE(500);
+      END_STATE();
+    case 441:
+      if (lookahead == 'h') ADVANCE(501);
+      END_STATE();
+    case 442:
+      if (lookahead == 'a') ADVANCE(502);
+      END_STATE();
+    case 443:
+      if (lookahead == 'e') ADVANCE(503);
+      END_STATE();
+    case 444:
+      if (lookahead == 'r') ADVANCE(504);
+      END_STATE();
+    case 445:
+      if (lookahead == 'e') ADVANCE(505);
+      END_STATE();
     case 446:
-      if (lookahead == 'm') ADVANCE(477);
+      if (lookahead == 'r') ADVANCE(506);
       END_STATE();
     case 447:
-      if (lookahead == 'l') ADVANCE(478);
+      if (lookahead == 'c') ADVANCE(507);
       END_STATE();
     case 448:
-      ACCEPT_TOKEN(anon_sym_set_false_path);
+      if (lookahead == 'n') ADVANCE(508);
       END_STATE();
     case 449:
-      if (lookahead == 'd') ADVANCE(479);
+      if (lookahead == 'e') ADVANCE(509);
       END_STATE();
     case 450:
-      if (lookahead == 'n') ADVANCE(480);
+      if (lookahead == 'a') ADVANCE(510);
       END_STATE();
     case 451:
-      if (lookahead == 'o') ADVANCE(481);
+      if (lookahead == 'a') ADVANCE(511);
       END_STATE();
     case 452:
-      if (lookahead == 's') ADVANCE(482);
-      END_STATE();
-    case 453:
-      if (lookahead == 'y') ADVANCE(483);
-      END_STATE();
-    case 454:
-      if (lookahead == 's') ADVANCE(484);
-      END_STATE();
-    case 455:
-      if (lookahead == 't') ADVANCE(485);
-      END_STATE();
-    case 456:
-      if (lookahead == 'c') ADVANCE(486);
-      END_STATE();
-    case 457:
-      ACCEPT_TOKEN(anon_sym_set_max_fanout);
-      END_STATE();
-    case 458:
-      if (lookahead == 'e') ADVANCE(487);
-      END_STATE();
-    case 459:
-      if (lookahead == 'o') ADVANCE(488);
-      END_STATE();
-    case 460:
-      if (lookahead == 't') ADVANCE(489);
-      END_STATE();
-    case 461:
-      if (lookahead == 't') ADVANCE(490);
-      END_STATE();
-    case 462:
-      if (lookahead == 'w') ADVANCE(491);
-      END_STATE();
-    case 463:
-      if (lookahead == '_') ADVANCE(492);
-      END_STATE();
-    case 464:
-      if (lookahead == 'c') ADVANCE(493);
-      END_STATE();
-    case 465:
-      if (lookahead == 'a') ADVANCE(494);
-      END_STATE();
-    case 466:
-      if (lookahead == 't') ADVANCE(495);
-      END_STATE();
-    case 467:
-      if (lookahead == '_') ADVANCE(496);
-      END_STATE();
-    case 468:
-      if (lookahead == 'a') ADVANCE(497);
-      END_STATE();
-    case 469:
-      if (lookahead == 'm') ADVANCE(498);
-      END_STATE();
-    case 470:
-      if (lookahead == 'd') ADVANCE(499);
-      END_STATE();
-    case 471:
-      if (lookahead == 'e') ADVANCE(500);
-      END_STATE();
-    case 472:
-      if (lookahead == 'i') ADVANCE(501);
-      END_STATE();
-    case 473:
-      if (lookahead == 's') ADVANCE(502);
-      END_STATE();
-    case 474:
-      if (lookahead == 'c') ADVANCE(503);
-      END_STATE();
-    case 475:
-      if (lookahead == 'i') ADVANCE(504);
-      END_STATE();
-    case 476:
-      if (lookahead == 't') ADVANCE(505);
-      END_STATE();
-    case 477:
-      if (lookahead == 'i') ADVANCE(506);
-      END_STATE();
-    case 478:
-      if (lookahead == 'l') ADVANCE(507);
-      END_STATE();
-    case 479:
-      ACCEPT_TOKEN(anon_sym_set_fanout_load);
-      END_STATE();
-    case 480:
-      if (lookahead == 'c') ADVANCE(508);
-      END_STATE();
-    case 481:
-      if (lookahead == 'r') ADVANCE(509);
-      END_STATE();
-    case 482:
-      if (lookahead == 'i') ADVANCE(510);
-      END_STATE();
-    case 483:
-      ACCEPT_TOKEN(anon_sym_set_input_delay);
-      END_STATE();
-    case 484:
-      if (lookahead == 'i') ADVANCE(511);
-      END_STATE();
-    case 485:
       if (lookahead == 'a') ADVANCE(512);
       END_STATE();
+    case 453:
+      if (lookahead == 'a') ADVANCE(513);
+      END_STATE();
+    case 454:
+      if (lookahead == 'o') ADVANCE(514);
+      END_STATE();
+    case 455:
+      if (lookahead == 'k') ADVANCE(515);
+      END_STATE();
+    case 456:
+      if (lookahead == 'w') ADVANCE(516);
+      END_STATE();
+    case 457:
+      if (lookahead == 'e') ADVANCE(517);
+      END_STATE();
+    case 458:
+      if (lookahead == 'n') ADVANCE(518);
+      END_STATE();
+    case 459:
+      if (lookahead == 'a') ADVANCE(519);
+      END_STATE();
+    case 460:
+      if (lookahead == 'a') ADVANCE(520);
+      END_STATE();
+    case 461:
+      if (lookahead == 's') ADVANCE(521);
+      END_STATE();
+    case 462:
+      if (lookahead == 'c') ADVANCE(522);
+      END_STATE();
+    case 463:
+      if (lookahead == 'n') ADVANCE(523);
+      END_STATE();
+    case 464:
+      if (lookahead == 'd') ADVANCE(524);
+      END_STATE();
+    case 465:
+      if (lookahead == 'n') ADVANCE(525);
+      END_STATE();
+    case 466:
+      if (lookahead == 't') ADVANCE(526);
+      END_STATE();
+    case 467:
+      if (lookahead == 'n') ADVANCE(527);
+      END_STATE();
+    case 468:
+      if (lookahead == 'r') ADVANCE(528);
+      END_STATE();
+    case 469:
+      if (lookahead == 'n') ADVANCE(529);
+      END_STATE();
+    case 470:
+      if (lookahead == 't') ADVANCE(530);
+      END_STATE();
+    case 471:
+      if (lookahead == 'd') ADVANCE(531);
+      END_STATE();
+    case 472:
+      ACCEPT_TOKEN(anon_sym_set_voltage);
+      END_STATE();
+    case 473:
+      if (lookahead == 'a') ADVANCE(532);
+      END_STATE();
+    case 474:
+      if (lookahead == 's') ADVANCE(533);
+      END_STATE();
+    case 475:
+      ACCEPT_TOKEN(anon_sym_create_clock);
+      END_STATE();
+    case 476:
+      if (lookahead == 'a') ADVANCE(534);
+      END_STATE();
+    case 477:
+      if (lookahead == 'g') ADVANCE(535);
+      END_STATE();
+    case 478:
+      if (lookahead == 'a') ADVANCE(536);
+      END_STATE();
+    case 479:
+      if (lookahead == '_') ADVANCE(537);
+      END_STATE();
+    case 480:
+      if (lookahead == 'e') ADVANCE(538);
+      END_STATE();
+    case 481:
+      if (lookahead == 'd') ADVANCE(539);
+      END_STATE();
+    case 482:
+      if (lookahead == 's') ADVANCE(540);
+      END_STATE();
+    case 483:
+      ACCEPT_TOKEN(anon_sym_get_lib_pins);
+      END_STATE();
+    case 484:
+      if (lookahead == 'a') ADVANCE(541);
+      END_STATE();
+    case 485:
+      ACCEPT_TOKEN(anon_sym_get_property);
+      END_STATE();
     case 486:
-      if (lookahead == '_') ADVANCE(513);
+      if (lookahead == 'g') ADVANCE(542);
       END_STATE();
     case 487:
-      if (lookahead == '_') ADVANCE(514);
+      ACCEPT_TOKEN(anon_sym_reset_design);
       END_STATE();
     case 488:
-      if (lookahead == 'r') ADVANCE(515);
+      if (lookahead == 'd') ADVANCE(543);
       END_STATE();
     case 489:
-      if (lookahead == 'i') ADVANCE(516);
-      END_STATE();
-    case 490:
-      if (lookahead == 'a') ADVANCE(517);
-      END_STATE();
-    case 491:
-      if (lookahead == 'i') ADVANCE(518);
-      END_STATE();
-    case 492:
-      if (lookahead == 'p') ADVANCE(519);
-      END_STATE();
-    case 493:
-      if (lookahead == 'o') ADVANCE(520);
-      END_STATE();
-    case 494:
-      if (lookahead == 'y') ADVANCE(521);
-      END_STATE();
-    case 495:
-      if (lookahead == '_') ADVANCE(522);
-      END_STATE();
-    case 496:
-      if (lookahead == 'c') ADVANCE(523);
-      END_STATE();
-    case 497:
-      if (lookahead == 't') ADVANCE(524);
-      END_STATE();
-    case 498:
-      if (lookahead == 'o') ADVANCE(525);
-      END_STATE();
-    case 499:
-      if (lookahead == '_') ADVANCE(526);
-      END_STATE();
-    case 500:
-      ACCEPT_TOKEN(anon_sym_current_instance);
-      END_STATE();
-    case 501:
-      if (lookahead == 's') ADVANCE(527);
-      END_STATE();
-    case 502:
-      ACCEPT_TOKEN(anon_sym_set_clock_groups);
-      END_STATE();
-    case 503:
-      if (lookahead == 'y') ADVANCE(528);
-      END_STATE();
-    case 504:
-      if (lookahead == 't') ADVANCE(529);
-      END_STATE();
-    case 505:
-      if (lookahead == 'a') ADVANCE(530);
-      END_STATE();
-    case 506:
-      if (lookahead == 'n') ADVANCE(531);
-      END_STATE();
-    case 507:
-      ACCEPT_TOKEN(anon_sym_set_driving_cell);
-      END_STATE();
-    case 508:
-      if (lookahead == 'y') ADVANCE(532);
-      END_STATE();
-    case 509:
-      if (lookahead == 'k') ADVANCE(533);
-      END_STATE();
-    case 510:
-      if (lookahead == 't') ADVANCE(534);
-      END_STATE();
-    case 511:
-      if (lookahead == 't') ADVANCE(535);
-      END_STATE();
-    case 512:
-      if (lookahead == 'n') ADVANCE(536);
-      END_STATE();
-    case 513:
-      if (lookahead == 'p') ADVANCE(537);
-      END_STATE();
-    case 514:
-      if (lookahead == 'p') ADVANCE(538);
-      END_STATE();
-    case 515:
-      if (lookahead == 'r') ADVANCE(539);
-      END_STATE();
-    case 516:
-      if (lookahead == 'o') ADVANCE(540);
-      END_STATE();
-    case 517:
-      if (lookahead == 'n') ADVANCE(541);
-      END_STATE();
-    case 518:
-      if (lookahead == 'd') ADVANCE(542);
-      END_STATE();
-    case 519:
-      if (lookahead == 'a') ADVANCE(543);
-      END_STATE();
-    case 520:
       if (lookahead == 'n') ADVANCE(544);
       END_STATE();
+    case 490:
+      if (lookahead == 'l') ADVANCE(545);
+      END_STATE();
+    case 491:
+      if (lookahead == 'o') ADVANCE(546);
+      END_STATE();
+    case 492:
+      if (lookahead == 't') ADVANCE(547);
+      END_STATE();
+    case 493:
+      if (lookahead == 'n') ADVANCE(548);
+      END_STATE();
+    case 494:
+      if (lookahead == 'a') ADVANCE(549);
+      END_STATE();
+    case 495:
+      if (lookahead == 'c') ADVANCE(550);
+      END_STATE();
+    case 496:
+      if (lookahead == 'c') ADVANCE(551);
+      END_STATE();
+    case 497:
+      if (lookahead == 't') ADVANCE(552);
+      END_STATE();
+    case 498:
+      if (lookahead == 'c') ADVANCE(553);
+      END_STATE();
+    case 499:
+      if (lookahead == 't') ADVANCE(554);
+      END_STATE();
+    case 500:
+      if (lookahead == 'o') ADVANCE(555);
+      END_STATE();
+    case 501:
+      if (lookahead == 'y') ADVANCE(556);
+      END_STATE();
+    case 502:
+      if (lookahead == 't') ADVANCE(557);
+      END_STATE();
+    case 503:
+      if (lookahead == 't') ADVANCE(558);
+      END_STATE();
+    case 504:
+      if (lookahead == 'a') ADVANCE(559);
+      END_STATE();
+    case 505:
+      if (lookahead == 'l') ADVANCE(560);
+      END_STATE();
+    case 506:
+      if (lookahead == 'a') ADVANCE(561);
+      END_STATE();
+    case 507:
+      ACCEPT_TOKEN(anon_sym_set_logic_dc);
+      END_STATE();
+    case 508:
+      if (lookahead == 'e') ADVANCE(562);
+      END_STATE();
+    case 509:
+      if (lookahead == 'r') ADVANCE(563);
+      END_STATE();
+    case 510:
+      ACCEPT_TOKEN(anon_sym_set_max_area);
+      END_STATE();
+    case 511:
+      if (lookahead == 'c') ADVANCE(564);
+      END_STATE();
+    case 512:
+      if (lookahead == 'y') ADVANCE(565);
+      END_STATE();
+    case 513:
+      if (lookahead == 'm') ADVANCE(566);
+      END_STATE();
+    case 514:
+      if (lookahead == 'u') ADVANCE(567);
+      END_STATE();
+    case 515:
+      if (lookahead == 'a') ADVANCE(568);
+      END_STATE();
+    case 516:
+      ACCEPT_TOKEN(anon_sym_set_max_skew);
+      END_STATE();
+    case 517:
+      if (lookahead == '_') ADVANCE(569);
+      END_STATE();
+    case 518:
+      if (lookahead == 's') ADVANCE(570);
+      END_STATE();
+    case 519:
+      if (lookahead == 'c') ADVANCE(571);
+      END_STATE();
+    case 520:
+      if (lookahead == 'y') ADVANCE(572);
+      END_STATE();
     case 521:
-      ACCEPT_TOKEN(anon_sym_set_output_delay);
+      if (lookahead == 'e') ADVANCE(573);
       END_STATE();
     case 522:
-      if (lookahead == 'n') ADVANCE(545);
+      if (lookahead == 'l') ADVANCE(574);
       END_STATE();
     case 523:
-      if (lookahead == 'l') ADVANCE(546);
+      if (lookahead == 'g') ADVANCE(575);
       END_STATE();
     case 524:
-      if (lookahead == 'e') ADVANCE(547);
-      END_STATE();
-    case 525:
-      if (lookahead == 'd') ADVANCE(548);
-      END_STATE();
-    case 526:
-      if (lookahead == 'c') ADVANCE(549);
-      END_STATE();
-    case 527:
-      ACCEPT_TOKEN(anon_sym_set_case_analysis);
-      END_STATE();
-    case 528:
-      ACCEPT_TOKEN(anon_sym_set_clock_latency);
-      END_STATE();
-    case 529:
-      if (lookahead == 'i') ADVANCE(550);
-      END_STATE();
-    case 530:
-      if (lookahead == 'i') ADVANCE(551);
-      END_STATE();
-    case 531:
-      if (lookahead == 'g') ADVANCE(552);
-      END_STATE();
-    case 532:
-      ACCEPT_TOKEN(anon_sym_set_ideal_latency);
-      END_STATE();
-    case 533:
-      ACCEPT_TOKEN(anon_sym_set_ideal_network);
-      END_STATE();
-    case 534:
-      if (lookahead == 'i') ADVANCE(553);
-      END_STATE();
-    case 535:
-      if (lookahead == 'i') ADVANCE(554);
-      END_STATE();
-    case 536:
-      if (lookahead == 'c') ADVANCE(555);
-      END_STATE();
-    case 537:
-      if (lookahead == 'o') ADVANCE(556);
-      END_STATE();
-    case 538:
-      if (lookahead == 'o') ADVANCE(557);
-      END_STATE();
-    case 539:
-      if (lookahead == 'o') ADVANCE(558);
-      END_STATE();
-    case 540:
-      if (lookahead == 'n') ADVANCE(559);
-      END_STATE();
-    case 541:
-      if (lookahead == 'c') ADVANCE(560);
-      END_STATE();
-    case 542:
-      if (lookahead == 't') ADVANCE(561);
-      END_STATE();
-    case 543:
-      if (lookahead == 't') ADVANCE(562);
-      END_STATE();
-    case 544:
-      if (lookahead == 'd') ADVANCE(563);
-      END_STATE();
-    case 545:
-      if (lookahead == 'u') ADVANCE(564);
-      END_STATE();
-    case 546:
-      if (lookahead == 'o') ADVANCE(565);
-      END_STATE();
-    case 547:
-      ACCEPT_TOKEN(anon_sym_set_timing_derate);
-      END_STATE();
-    case 548:
-      if (lookahead == 'e') ADVANCE(566);
-      END_STATE();
-    case 549:
-      if (lookahead == 'l') ADVANCE(567);
-      END_STATE();
-    case 550:
-      if (lookahead == 'o') ADVANCE(568);
-      END_STATE();
-    case 551:
-      if (lookahead == 'n') ADVANCE(569);
-      END_STATE();
-    case 552:
-      ACCEPT_TOKEN(anon_sym_set_disable_timing);
-      END_STATE();
-    case 553:
-      if (lookahead == 'o') ADVANCE(570);
-      END_STATE();
-    case 554:
-      if (lookahead == 'o') ADVANCE(571);
-      END_STATE();
-    case 555:
-      if (lookahead == 'e') ADVANCE(572);
-      END_STATE();
-    case 556:
-      if (lookahead == 'w') ADVANCE(573);
-      END_STATE();
-    case 557:
-      if (lookahead == 'w') ADVANCE(574);
-      END_STATE();
-    case 558:
-      if (lookahead == 'w') ADVANCE(575);
-      END_STATE();
-    case 559:
-      ACCEPT_TOKEN(anon_sym_set_max_transition);
-      END_STATE();
-    case 560:
       if (lookahead == 'e') ADVANCE(576);
       END_STATE();
-    case 561:
-      if (lookahead == 'h') ADVANCE(577);
+    case 525:
+      if (lookahead == 'o') ADVANCE(577);
       END_STATE();
-    case 562:
-      if (lookahead == 'h') ADVANCE(578);
+    case 526:
+      if (lookahead == 'e') ADVANCE(578);
       END_STATE();
-    case 563:
-      if (lookahead == 'i') ADVANCE(579);
+    case 527:
+      if (lookahead == 'c') ADVANCE(579);
       END_STATE();
-    case 564:
-      if (lookahead == 'm') ADVANCE(580);
+    case 528:
+      if (lookahead == 'a') ADVANCE(580);
       END_STATE();
-    case 565:
-      if (lookahead == 'c') ADVANCE(581);
+    case 529:
+      if (lookahead == 'g') ADVANCE(581);
       END_STATE();
-    case 566:
-      ACCEPT_TOKEN(anon_sym_set_wire_load_mode);
-      if (lookahead == 'l') ADVANCE(582);
+    case 530:
+      if (lookahead == 'u') ADVANCE(582);
       END_STATE();
-    case 567:
-      if (lookahead == 'o') ADVANCE(583);
+    case 531:
+      if (lookahead == 'e') ADVANCE(583);
       END_STATE();
-    case 568:
-      if (lookahead == 'n') ADVANCE(584);
+    case 532:
+      if (lookahead == 'd') ADVANCE(584);
       END_STATE();
-    case 569:
+    case 533:
+      ACCEPT_TOKEN(anon_sym_all_registers);
+      END_STATE();
+    case 534:
       if (lookahead == 't') ADVANCE(585);
       END_STATE();
-    case 570:
+    case 535:
       if (lookahead == 'n') ADVANCE(586);
       END_STATE();
-    case 571:
+    case 536:
       if (lookahead == 'n') ADVANCE(587);
       END_STATE();
-    case 572:
-      ACCEPT_TOKEN(anon_sym_set_max_capacitance);
+    case 537:
+      if (lookahead == 'u') ADVANCE(588);
       END_STATE();
-    case 573:
-      if (lookahead == 'e') ADVANCE(588);
+    case 538:
+      ACCEPT_TOKEN(anon_sym_get_attribute);
       END_STATE();
-    case 574:
-      if (lookahead == 'e') ADVANCE(589);
+    case 539:
+      if (lookahead == '_') ADVANCE(589);
       END_STATE();
-    case 575:
-      ACCEPT_TOKEN(anon_sym_set_max_time_borrow);
+    case 540:
+      ACCEPT_TOKEN(anon_sym_get_lib_cells);
       END_STATE();
-    case 576:
-      ACCEPT_TOKEN(anon_sym_set_min_capacitance);
+    case 541:
+      if (lookahead == 'm') ADVANCE(590);
       END_STATE();
-    case 577:
-      ACCEPT_TOKEN(anon_sym_set_min_pulse_width);
+    case 542:
+      ACCEPT_TOKEN(anon_sym_report_timing);
       END_STATE();
-    case 578:
-      ACCEPT_TOKEN(anon_sym_set_multicycle_path);
+    case 543:
+      if (lookahead == '_') ADVANCE(591);
       END_STATE();
-    case 579:
-      if (lookahead == 't') ADVANCE(590);
+    case 544:
+      if (lookahead == 'c') ADVANCE(592);
       END_STATE();
-    case 580:
-      if (lookahead == 'b') ADVANCE(591);
+    case 545:
+      if (lookahead == 'y') ADVANCE(593);
       END_STATE();
-    case 581:
-      if (lookahead == 'k') ADVANCE(592);
+    case 546:
+      if (lookahead == 'u') ADVANCE(594);
       END_STATE();
-    case 582:
-      ACCEPT_TOKEN(anon_sym_set_wire_load_model);
+    case 547:
+      if (lookahead == 'e') ADVANCE(595);
       END_STATE();
-    case 583:
-      if (lookahead == 'c') ADVANCE(593);
+    case 548:
+      if (lookahead == 's') ADVANCE(596);
       END_STATE();
-    case 584:
-      ACCEPT_TOKEN(anon_sym_set_clock_transition);
+    case 549:
+      if (lookahead == 'n') ADVANCE(597);
       END_STATE();
-    case 585:
-      if (lookahead == 'y') ADVANCE(594);
-      END_STATE();
-    case 586:
-      ACCEPT_TOKEN(anon_sym_set_ideal_transition);
-      END_STATE();
-    case 587:
-      ACCEPT_TOKEN(anon_sym_set_input_transition);
-      END_STATE();
-    case 588:
-      if (lookahead == 'r') ADVANCE(595);
-      END_STATE();
-    case 589:
-      if (lookahead == 'r') ADVANCE(596);
-      END_STATE();
-    case 590:
-      if (lookahead == 'i') ADVANCE(597);
-      END_STATE();
-    case 591:
+    case 550:
       if (lookahead == 'e') ADVANCE(598);
       END_STATE();
-    case 592:
-      ACCEPT_TOKEN(anon_sym_set_propagated_clock);
-      END_STATE();
-    case 593:
+    case 551:
       if (lookahead == 'k') ADVANCE(599);
       END_STATE();
+    case 552:
+      if (lookahead == 'i') ADVANCE(600);
+      END_STATE();
+    case 553:
+      if (lookahead == 'e') ADVANCE(601);
+      END_STATE();
+    case 554:
+      if (lookahead == 'h') ADVANCE(602);
+      END_STATE();
+    case 555:
+      if (lookahead == 'a') ADVANCE(603);
+      END_STATE();
+    case 556:
+      if (lookahead == '_') ADVANCE(604);
+      END_STATE();
+    case 557:
+      if (lookahead == 'e') ADVANCE(605);
+      END_STATE();
+    case 558:
+      if (lookahead == 'w') ADVANCE(606);
+      END_STATE();
+    case 559:
+      if (lookahead == 'n') ADVANCE(607);
+      END_STATE();
+    case 560:
+      if (lookahead == 'a') ADVANCE(608);
+      END_STATE();
+    case 561:
+      if (lookahead == 'n') ADVANCE(609);
+      END_STATE();
+    case 562:
+      ACCEPT_TOKEN(anon_sym_set_logic_one);
+      END_STATE();
+    case 563:
+      if (lookahead == 'o') ADVANCE(610);
+      END_STATE();
+    case 564:
+      if (lookahead == 'i') ADVANCE(611);
+      END_STATE();
+    case 565:
+      ACCEPT_TOKEN(anon_sym_set_max_delay);
+      END_STATE();
+    case 566:
+      if (lookahead == 'i') ADVANCE(612);
+      END_STATE();
+    case 567:
+      if (lookahead == 't') ADVANCE(613);
+      END_STATE();
+    case 568:
+      if (lookahead == 'g') ADVANCE(614);
+      END_STATE();
+    case 569:
+      if (lookahead == 'b') ADVANCE(615);
+      END_STATE();
+    case 570:
+      if (lookahead == 'i') ADVANCE(616);
+      END_STATE();
+    case 571:
+      if (lookahead == 'i') ADVANCE(617);
+      END_STATE();
+    case 572:
+      ACCEPT_TOKEN(anon_sym_set_min_delay);
+      END_STATE();
+    case 573:
+      if (lookahead == '_') ADVANCE(618);
+      END_STATE();
+    case 574:
+      if (lookahead == 'e') ADVANCE(619);
+      END_STATE();
+    case 575:
+      if (lookahead == '_') ADVANCE(620);
+      END_STATE();
+    case 576:
+      if (lookahead == 'l') ADVANCE(621);
+      END_STATE();
+    case 577:
+      if (lookahead == 'u') ADVANCE(622);
+      END_STATE();
+    case 578:
+      if (lookahead == 'd') ADVANCE(623);
+      END_STATE();
+    case 579:
+      if (lookahead == 'e') ADVANCE(624);
+      END_STATE();
+    case 580:
+      if (lookahead == 't') ADVANCE(625);
+      END_STATE();
+    case 581:
+      if (lookahead == '_') ADVANCE(626);
+      END_STATE();
+    case 582:
+      if (lookahead == 'r') ADVANCE(627);
+      END_STATE();
+    case 583:
+      if (lookahead == 'r') ADVANCE(628);
+      END_STATE();
+    case 584:
+      if (lookahead == '_') ADVANCE(629);
+      END_STATE();
+    case 585:
+      if (lookahead == 'e') ADVANCE(630);
+      END_STATE();
+    case 586:
+      ACCEPT_TOKEN(anon_sym_current_design);
+      END_STATE();
+    case 587:
+      if (lookahead == 'c') ADVANCE(631);
+      END_STATE();
+    case 588:
+      if (lookahead == 'n') ADVANCE(632);
+      END_STATE();
+    case 589:
+      if (lookahead == 'c') ADVANCE(633);
+      END_STATE();
+    case 590:
+      if (lookahead == 'e') ADVANCE(634);
+      END_STATE();
+    case 591:
+      if (lookahead == 'c') ADVANCE(635);
+      if (lookahead == 'd') ADVANCE(636);
+      END_STATE();
+    case 592:
+      if (lookahead == 'e') ADVANCE(637);
+      END_STATE();
+    case 593:
+      if (lookahead == 's') ADVANCE(638);
+      END_STATE();
     case 594:
-      ACCEPT_TOKEN(anon_sym_set_clock_uncertainty);
+      if (lookahead == 'p') ADVANCE(639);
       END_STATE();
     case 595:
-      ACCEPT_TOKEN(anon_sym_set_max_dynamic_power);
+      if (lookahead == 'n') ADVANCE(640);
       END_STATE();
     case 596:
-      ACCEPT_TOKEN(anon_sym_set_max_leakage_power);
+      if (lookahead == 'e') ADVANCE(641);
       END_STATE();
     case 597:
-      if (lookahead == 'o') ADVANCE(600);
+      if (lookahead == 's') ADVANCE(642);
       END_STATE();
     case 598:
-      if (lookahead == 'r') ADVANCE(601);
+      if (lookahead == 'r') ADVANCE(643);
       END_STATE();
     case 599:
-      ACCEPT_TOKEN(anon_sym_create_generated_clock);
+      ACCEPT_TOKEN(anon_sym_set_data_check);
       END_STATE();
     case 600:
-      if (lookahead == 'n') ADVANCE(602);
+      if (lookahead == 'm') ADVANCE(644);
       END_STATE();
     case 601:
-      ACCEPT_TOKEN(anon_sym_set_port_fanout_number);
+      if (lookahead == 'l') ADVANCE(645);
       END_STATE();
     case 602:
-      if (lookahead == 's') ADVANCE(603);
+      ACCEPT_TOKEN(anon_sym_set_false_path);
       END_STATE();
     case 603:
+      if (lookahead == 'd') ADVANCE(646);
+      END_STATE();
+    case 604:
+      if (lookahead == 's') ADVANCE(647);
+      END_STATE();
+    case 605:
+      if (lookahead == 'n') ADVANCE(648);
+      END_STATE();
+    case 606:
+      if (lookahead == 'o') ADVANCE(649);
+      END_STATE();
+    case 607:
+      if (lookahead == 's') ADVANCE(650);
+      END_STATE();
+    case 608:
+      if (lookahead == 'y') ADVANCE(651);
+      END_STATE();
+    case 609:
+      if (lookahead == 's') ADVANCE(652);
+      END_STATE();
+    case 610:
+      ACCEPT_TOKEN(anon_sym_set_logic_zero);
+      END_STATE();
+    case 611:
+      if (lookahead == 't') ADVANCE(653);
+      END_STATE();
+    case 612:
+      if (lookahead == 'c') ADVANCE(654);
+      END_STATE();
+    case 613:
+      ACCEPT_TOKEN(anon_sym_set_max_fanout);
+      END_STATE();
+    case 614:
+      if (lookahead == 'e') ADVANCE(655);
+      END_STATE();
+    case 615:
+      if (lookahead == 'o') ADVANCE(656);
+      END_STATE();
+    case 616:
+      if (lookahead == 't') ADVANCE(657);
+      END_STATE();
+    case 617:
+      if (lookahead == 't') ADVANCE(658);
+      END_STATE();
+    case 618:
+      if (lookahead == 'w') ADVANCE(659);
+      END_STATE();
+    case 619:
+      if (lookahead == '_') ADVANCE(660);
+      END_STATE();
+    case 620:
+      if (lookahead == 'c') ADVANCE(661);
+      END_STATE();
+    case 621:
+      if (lookahead == 'a') ADVANCE(662);
+      END_STATE();
+    case 622:
+      if (lookahead == 't') ADVANCE(663);
+      END_STATE();
+    case 623:
+      if (lookahead == '_') ADVANCE(664);
+      END_STATE();
+    case 624:
+      ACCEPT_TOKEN(anon_sym_set_resistance);
+      END_STATE();
+    case 625:
+      if (lookahead == 'e') ADVANCE(665);
+      END_STATE();
+    case 626:
+      if (lookahead == 'a') ADVANCE(666);
+      END_STATE();
+    case 627:
+      if (lookahead == 'e') ADVANCE(667);
+      END_STATE();
+    case 628:
+      if (lookahead == 'a') ADVANCE(668);
+      END_STATE();
+    case 629:
+      if (lookahead == 'm') ADVANCE(669);
+      END_STATE();
+    case 630:
+      if (lookahead == 'd') ADVANCE(670);
+      END_STATE();
+    case 631:
+      if (lookahead == 'e') ADVANCE(671);
+      END_STATE();
+    case 632:
+      if (lookahead == 'c') ADVANCE(672);
+      END_STATE();
+    case 633:
+      if (lookahead == 'l') ADVANCE(673);
+      END_STATE();
+    case 634:
+      ACCEPT_TOKEN(anon_sym_get_object_name);
+      END_STATE();
+    case 635:
+      if (lookahead == 'h') ADVANCE(674);
+      END_STATE();
+    case 636:
+      if (lookahead == 'e') ADVANCE(675);
+      END_STATE();
+    case 637:
+      ACCEPT_TOKEN(anon_sym_set_capacitance);
+      END_STATE();
+    case 638:
+      if (lookahead == 'i') ADVANCE(676);
+      END_STATE();
+    case 639:
+      if (lookahead == 's') ADVANCE(677);
+      END_STATE();
+    case 640:
+      if (lookahead == 'c') ADVANCE(678);
+      END_STATE();
+    case 641:
+      ACCEPT_TOKEN(anon_sym_set_clock_sense);
+      END_STATE();
+    case 642:
+      if (lookahead == 'i') ADVANCE(679);
+      END_STATE();
+    case 643:
+      if (lookahead == 't') ADVANCE(680);
+      END_STATE();
+    case 644:
+      if (lookahead == 'i') ADVANCE(681);
+      END_STATE();
+    case 645:
+      if (lookahead == 'l') ADVANCE(682);
+      END_STATE();
+    case 646:
+      ACCEPT_TOKEN(anon_sym_set_fanout_load);
+      END_STATE();
+    case 647:
+      if (lookahead == 'e') ADVANCE(683);
+      END_STATE();
+    case 648:
+      if (lookahead == 'c') ADVANCE(684);
+      END_STATE();
+    case 649:
+      if (lookahead == 'r') ADVANCE(685);
+      END_STATE();
+    case 650:
+      if (lookahead == 'i') ADVANCE(686);
+      END_STATE();
+    case 651:
+      ACCEPT_TOKEN(anon_sym_set_input_delay);
+      END_STATE();
+    case 652:
+      if (lookahead == 'i') ADVANCE(687);
+      END_STATE();
+    case 653:
+      if (lookahead == 'a') ADVANCE(688);
+      END_STATE();
+    case 654:
+      if (lookahead == '_') ADVANCE(689);
+      END_STATE();
+    case 655:
+      if (lookahead == '_') ADVANCE(690);
+      END_STATE();
+    case 656:
+      if (lookahead == 'r') ADVANCE(691);
+      END_STATE();
+    case 657:
+      if (lookahead == 'i') ADVANCE(692);
+      END_STATE();
+    case 658:
+      if (lookahead == 'a') ADVANCE(693);
+      END_STATE();
+    case 659:
+      if (lookahead == 'i') ADVANCE(694);
+      END_STATE();
+    case 660:
+      if (lookahead == 'p') ADVANCE(695);
+      END_STATE();
+    case 661:
+      if (lookahead == 'o') ADVANCE(696);
+      END_STATE();
+    case 662:
+      if (lookahead == 'y') ADVANCE(697);
+      END_STATE();
+    case 663:
+      if (lookahead == '_') ADVANCE(698);
+      END_STATE();
+    case 664:
+      if (lookahead == 'c') ADVANCE(699);
+      END_STATE();
+    case 665:
+      if (lookahead == '_') ADVANCE(700);
+      END_STATE();
+    case 666:
+      if (lookahead == 'c') ADVANCE(701);
+      END_STATE();
+    case 667:
+      ACCEPT_TOKEN(anon_sym_set_temperature);
+      END_STATE();
+    case 668:
+      if (lookahead == 't') ADVANCE(702);
+      END_STATE();
+    case 669:
+      if (lookahead == 'o') ADVANCE(703);
+      END_STATE();
+    case 670:
+      if (lookahead == '_') ADVANCE(704);
+      END_STATE();
+    case 671:
+      ACCEPT_TOKEN(anon_sym_current_instance);
+      END_STATE();
+    case 672:
+      if (lookahead == 'e') ADVANCE(705);
+      END_STATE();
+    case 673:
+      if (lookahead == 'o') ADVANCE(706);
+      END_STATE();
+    case 674:
+      if (lookahead == 'e') ADVANCE(707);
+      END_STATE();
+    case 675:
+      if (lookahead == 'l') ADVANCE(708);
+      END_STATE();
+    case 676:
+      if (lookahead == 's') ADVANCE(709);
+      END_STATE();
+    case 677:
+      ACCEPT_TOKEN(anon_sym_set_clock_groups);
+      END_STATE();
+    case 678:
+      if (lookahead == 'y') ADVANCE(710);
+      END_STATE();
+    case 679:
+      if (lookahead == 't') ADVANCE(711);
+      END_STATE();
+    case 680:
+      if (lookahead == 'a') ADVANCE(712);
+      END_STATE();
+    case 681:
+      if (lookahead == 'n') ADVANCE(713);
+      END_STATE();
+    case 682:
+      ACCEPT_TOKEN(anon_sym_set_driving_cell);
+      END_STATE();
+    case 683:
+      if (lookahead == 'p') ADVANCE(714);
+      END_STATE();
+    case 684:
+      if (lookahead == 'y') ADVANCE(715);
+      END_STATE();
+    case 685:
+      if (lookahead == 'k') ADVANCE(716);
+      END_STATE();
+    case 686:
+      if (lookahead == 't') ADVANCE(717);
+      END_STATE();
+    case 687:
+      if (lookahead == 't') ADVANCE(718);
+      END_STATE();
+    case 688:
+      if (lookahead == 'n') ADVANCE(719);
+      END_STATE();
+    case 689:
+      if (lookahead == 'p') ADVANCE(720);
+      END_STATE();
+    case 690:
+      if (lookahead == 'p') ADVANCE(721);
+      END_STATE();
+    case 691:
+      if (lookahead == 'r') ADVANCE(722);
+      END_STATE();
+    case 692:
+      if (lookahead == 'o') ADVANCE(723);
+      END_STATE();
+    case 693:
+      if (lookahead == 'n') ADVANCE(724);
+      END_STATE();
+    case 694:
+      if (lookahead == 'd') ADVANCE(725);
+      END_STATE();
+    case 695:
+      if (lookahead == 'a') ADVANCE(726);
+      END_STATE();
+    case 696:
+      if (lookahead == 'n') ADVANCE(727);
+      END_STATE();
+    case 697:
+      ACCEPT_TOKEN(anon_sym_set_output_delay);
+      END_STATE();
+    case 698:
+      if (lookahead == 'n') ADVANCE(728);
+      END_STATE();
+    case 699:
+      if (lookahead == 'l') ADVANCE(729);
+      END_STATE();
+    case 700:
+      if (lookahead == 'f') ADVANCE(730);
+      END_STATE();
+    case 701:
+      if (lookahead == 't') ADVANCE(731);
+      END_STATE();
+    case 702:
+      if (lookahead == 'e') ADVANCE(732);
+      END_STATE();
+    case 703:
+      if (lookahead == 'd') ADVANCE(733);
+      END_STATE();
+    case 704:
+      if (lookahead == 'c') ADVANCE(734);
+      END_STATE();
+    case 705:
+      if (lookahead == 'r') ADVANCE(735);
+      END_STATE();
+    case 706:
+      if (lookahead == 'c') ADVANCE(736);
+      END_STATE();
+    case 707:
+      if (lookahead == 'c') ADVANCE(737);
+      END_STATE();
+    case 708:
+      if (lookahead == 'a') ADVANCE(738);
+      END_STATE();
+    case 709:
+      ACCEPT_TOKEN(anon_sym_set_case_analysis);
+      END_STATE();
+    case 710:
+      ACCEPT_TOKEN(anon_sym_set_clock_latency);
+      END_STATE();
+    case 711:
+      if (lookahead == 'i') ADVANCE(739);
+      END_STATE();
+    case 712:
+      if (lookahead == 'i') ADVANCE(740);
+      END_STATE();
+    case 713:
+      if (lookahead == 'g') ADVANCE(741);
+      END_STATE();
+    case 714:
+      if (lookahead == 'a') ADVANCE(742);
+      END_STATE();
+    case 715:
+      ACCEPT_TOKEN(anon_sym_set_ideal_latency);
+      END_STATE();
+    case 716:
+      ACCEPT_TOKEN(anon_sym_set_ideal_network);
+      END_STATE();
+    case 717:
+      if (lookahead == 'i') ADVANCE(743);
+      END_STATE();
+    case 718:
+      if (lookahead == 'i') ADVANCE(744);
+      END_STATE();
+    case 719:
+      if (lookahead == 'c') ADVANCE(745);
+      END_STATE();
+    case 720:
+      if (lookahead == 'o') ADVANCE(746);
+      END_STATE();
+    case 721:
+      if (lookahead == 'o') ADVANCE(747);
+      END_STATE();
+    case 722:
+      if (lookahead == 'o') ADVANCE(748);
+      END_STATE();
+    case 723:
+      if (lookahead == 'n') ADVANCE(749);
+      END_STATE();
+    case 724:
+      if (lookahead == 'c') ADVANCE(750);
+      END_STATE();
+    case 725:
+      if (lookahead == 't') ADVANCE(751);
+      END_STATE();
+    case 726:
+      if (lookahead == 't') ADVANCE(752);
+      END_STATE();
+    case 727:
+      if (lookahead == 'd') ADVANCE(753);
+      END_STATE();
+    case 728:
+      if (lookahead == 'u') ADVANCE(754);
+      END_STATE();
+    case 729:
+      if (lookahead == 'o') ADVANCE(755);
+      END_STATE();
+    case 730:
+      if (lookahead == 'r') ADVANCE(756);
+      END_STATE();
+    case 731:
+      if (lookahead == 'i') ADVANCE(757);
+      END_STATE();
+    case 732:
+      ACCEPT_TOKEN(anon_sym_set_timing_derate);
+      END_STATE();
+    case 733:
+      if (lookahead == 'e') ADVANCE(758);
+      END_STATE();
+    case 734:
+      if (lookahead == 'l') ADVANCE(759);
+      END_STATE();
+    case 735:
+      if (lookahead == 't') ADVANCE(760);
+      END_STATE();
+    case 736:
+      if (lookahead == 'k') ADVANCE(761);
+      END_STATE();
+    case 737:
+      if (lookahead == 'k') ADVANCE(762);
+      END_STATE();
+    case 738:
+      if (lookahead == 'y') ADVANCE(763);
+      END_STATE();
+    case 739:
+      if (lookahead == 'o') ADVANCE(764);
+      END_STATE();
+    case 740:
+      if (lookahead == 'n') ADVANCE(765);
+      END_STATE();
+    case 741:
+      ACCEPT_TOKEN(anon_sym_set_disable_timing);
+      END_STATE();
+    case 742:
+      if (lookahead == 'r') ADVANCE(766);
+      END_STATE();
+    case 743:
+      if (lookahead == 'o') ADVANCE(767);
+      END_STATE();
+    case 744:
+      if (lookahead == 'o') ADVANCE(768);
+      END_STATE();
+    case 745:
+      if (lookahead == 'e') ADVANCE(769);
+      END_STATE();
+    case 746:
+      if (lookahead == 'w') ADVANCE(770);
+      END_STATE();
+    case 747:
+      if (lookahead == 'w') ADVANCE(771);
+      END_STATE();
+    case 748:
+      if (lookahead == 'w') ADVANCE(772);
+      END_STATE();
+    case 749:
+      ACCEPT_TOKEN(anon_sym_set_max_transition);
+      END_STATE();
+    case 750:
+      if (lookahead == 'e') ADVANCE(773);
+      END_STATE();
+    case 751:
+      if (lookahead == 'h') ADVANCE(774);
+      END_STATE();
+    case 752:
+      if (lookahead == 'h') ADVANCE(775);
+      END_STATE();
+    case 753:
+      if (lookahead == 'i') ADVANCE(776);
+      END_STATE();
+    case 754:
+      if (lookahead == 'm') ADVANCE(777);
+      END_STATE();
+    case 755:
+      if (lookahead == 'c') ADVANCE(778);
+      END_STATE();
+    case 756:
+      if (lookahead == 'o') ADVANCE(779);
+      END_STATE();
+    case 757:
+      if (lookahead == 'v') ADVANCE(780);
+      END_STATE();
+    case 758:
+      ACCEPT_TOKEN(anon_sym_set_wire_load_mode);
+      if (lookahead == 'l') ADVANCE(781);
+      END_STATE();
+    case 759:
+      if (lookahead == 'o') ADVANCE(782);
+      END_STATE();
+    case 760:
+      if (lookahead == 'a') ADVANCE(783);
+      END_STATE();
+    case 761:
+      if (lookahead == 's') ADVANCE(784);
+      END_STATE();
+    case 762:
+      ACCEPT_TOKEN(anon_sym_set_annotated_check);
+      END_STATE();
+    case 763:
+      ACCEPT_TOKEN(anon_sym_set_annotated_delay);
+      END_STATE();
+    case 764:
+      if (lookahead == 'n') ADVANCE(785);
+      END_STATE();
+    case 765:
+      if (lookahead == 't') ADVANCE(786);
+      END_STATE();
+    case 766:
+      if (lookahead == 'a') ADVANCE(787);
+      END_STATE();
+    case 767:
+      if (lookahead == 'n') ADVANCE(788);
+      END_STATE();
+    case 768:
+      if (lookahead == 'n') ADVANCE(789);
+      END_STATE();
+    case 769:
+      ACCEPT_TOKEN(anon_sym_set_max_capacitance);
+      END_STATE();
+    case 770:
+      if (lookahead == 'e') ADVANCE(790);
+      END_STATE();
+    case 771:
+      if (lookahead == 'e') ADVANCE(791);
+      END_STATE();
+    case 772:
+      ACCEPT_TOKEN(anon_sym_set_max_time_borrow);
+      END_STATE();
+    case 773:
+      ACCEPT_TOKEN(anon_sym_set_min_capacitance);
+      END_STATE();
+    case 774:
+      ACCEPT_TOKEN(anon_sym_set_min_pulse_width);
+      END_STATE();
+    case 775:
+      ACCEPT_TOKEN(anon_sym_set_multicycle_path);
+      END_STATE();
+    case 776:
+      if (lookahead == 't') ADVANCE(792);
+      END_STATE();
+    case 777:
+      if (lookahead == 'b') ADVANCE(793);
+      END_STATE();
+    case 778:
+      if (lookahead == 'k') ADVANCE(794);
+      END_STATE();
+    case 779:
+      if (lookahead == 'm') ADVANCE(795);
+      END_STATE();
+    case 780:
+      if (lookahead == 'i') ADVANCE(796);
+      END_STATE();
+    case 781:
+      ACCEPT_TOKEN(anon_sym_set_wire_load_model);
+      END_STATE();
+    case 782:
+      if (lookahead == 'c') ADVANCE(797);
+      END_STATE();
+    case 783:
+      if (lookahead == 'i') ADVANCE(798);
+      END_STATE();
+    case 784:
+      ACCEPT_TOKEN(anon_sym_get_generated_clocks);
+      END_STATE();
+    case 785:
+      ACCEPT_TOKEN(anon_sym_set_clock_transition);
+      END_STATE();
+    case 786:
+      if (lookahead == 'y') ADVANCE(799);
+      END_STATE();
+    case 787:
+      if (lookahead == 't') ADVANCE(800);
+      END_STATE();
+    case 788:
+      ACCEPT_TOKEN(anon_sym_set_ideal_transition);
+      END_STATE();
+    case 789:
+      ACCEPT_TOKEN(anon_sym_set_input_transition);
+      END_STATE();
+    case 790:
+      if (lookahead == 'r') ADVANCE(801);
+      END_STATE();
+    case 791:
+      if (lookahead == 'r') ADVANCE(802);
+      END_STATE();
+    case 792:
+      if (lookahead == 'i') ADVANCE(803);
+      END_STATE();
+    case 793:
+      if (lookahead == 'e') ADVANCE(804);
+      END_STATE();
+    case 794:
+      ACCEPT_TOKEN(anon_sym_set_propagated_clock);
+      END_STATE();
+    case 795:
+      if (lookahead == '_') ADVANCE(805);
+      END_STATE();
+    case 796:
+      if (lookahead == 't') ADVANCE(806);
+      END_STATE();
+    case 797:
+      if (lookahead == 'k') ADVANCE(807);
+      END_STATE();
+    case 798:
+      if (lookahead == 'n') ADVANCE(808);
+      END_STATE();
+    case 799:
+      ACCEPT_TOKEN(anon_sym_set_clock_uncertainty);
+      END_STATE();
+    case 800:
+      if (lookahead == 'o') ADVANCE(809);
+      END_STATE();
+    case 801:
+      ACCEPT_TOKEN(anon_sym_set_max_dynamic_power);
+      END_STATE();
+    case 802:
+      ACCEPT_TOKEN(anon_sym_set_max_leakage_power);
+      END_STATE();
+    case 803:
+      if (lookahead == 'o') ADVANCE(810);
+      END_STATE();
+    case 804:
+      if (lookahead == 'r') ADVANCE(811);
+      END_STATE();
+    case 805:
+      if (lookahead == 'l') ADVANCE(812);
+      END_STATE();
+    case 806:
+      if (lookahead == 'y') ADVANCE(813);
+      END_STATE();
+    case 807:
+      ACCEPT_TOKEN(anon_sym_create_generated_clock);
+      END_STATE();
+    case 808:
+      if (lookahead == 't') ADVANCE(814);
+      END_STATE();
+    case 809:
+      if (lookahead == 'r') ADVANCE(815);
+      END_STATE();
+    case 810:
+      if (lookahead == 'n') ADVANCE(816);
+      END_STATE();
+    case 811:
+      ACCEPT_TOKEN(anon_sym_set_port_fanout_number);
+      END_STATE();
+    case 812:
+      if (lookahead == 'i') ADVANCE(817);
+      END_STATE();
+    case 813:
+      ACCEPT_TOKEN(anon_sym_set_switching_activity);
+      END_STATE();
+    case 814:
+      if (lookahead == 'y') ADVANCE(818);
+      END_STATE();
+    case 815:
+      ACCEPT_TOKEN(anon_sym_set_hierarchy_separator);
+      END_STATE();
+    case 816:
+      if (lookahead == 's') ADVANCE(819);
+      END_STATE();
+    case 817:
+      if (lookahead == 'b') ADVANCE(820);
+      END_STATE();
+    case 818:
+      ACCEPT_TOKEN(anon_sym_derive_clock_uncertainty);
+      END_STATE();
+    case 819:
       ACCEPT_TOKEN(anon_sym_set_operating_conditions);
+      END_STATE();
+    case 820:
+      if (lookahead == 'r') ADVANCE(821);
+      END_STATE();
+    case 821:
+      if (lookahead == 'a') ADVANCE(822);
+      END_STATE();
+    case 822:
+      if (lookahead == 'r') ADVANCE(823);
+      END_STATE();
+    case 823:
+      if (lookahead == 'y') ADVANCE(824);
+      END_STATE();
+    case 824:
+      ACCEPT_TOKEN(anon_sym_set_slew_derate_from_library);
       END_STATE();
     default:
       return false;
@@ -6702,6 +7533,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(1),
     [anon_sym_set_max_time_borrow] = ACTIONS(1),
     [anon_sym_set_min_pulse_width] = ACTIONS(1),
+    [anon_sym_set_data_check] = ACTIONS(1),
+    [anon_sym_set_sense] = ACTIONS(1),
+    [anon_sym_set_resistance] = ACTIONS(1),
+    [anon_sym_set_capacitance] = ACTIONS(1),
+    [anon_sym_reset_design] = ACTIONS(1),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(1),
+    [anon_sym_set_annotated_delay] = ACTIONS(1),
+    [anon_sym_set_annotated_check] = ACTIONS(1),
+    [anon_sym_set_max_skew] = ACTIONS(1),
+    [anon_sym_set_clock_sense] = ACTIONS(1),
+    [anon_sym_set_logic_dc] = ACTIONS(1),
+    [anon_sym_set_logic_one] = ACTIONS(1),
+    [anon_sym_set_logic_zero] = ACTIONS(1),
+    [anon_sym_set_temperature] = ACTIONS(1),
+    [anon_sym_set_switching_activity] = ACTIONS(1),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(1),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(1),
     [anon_sym_get_ports] = ACTIONS(1),
     [anon_sym_get_pins] = ACTIONS(1),
     [anon_sym_get_clocks] = ACTIONS(1),
@@ -6714,6 +7562,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(1),
     [anon_sym_all_registers] = ACTIONS(1),
     [anon_sym_current_instance] = ACTIONS(1),
+    [anon_sym_get_generated_clocks] = ACTIONS(1),
+    [anon_sym_get_object_name] = ACTIONS(1),
+    [anon_sym_get_property] = ACTIONS(1),
+    [anon_sym_get_attribute] = ACTIONS(1),
     [anon_sym_regexp] = ACTIONS(1),
     [anon_sym_while] = ACTIONS(1),
     [anon_sym_expr] = ACTIONS(1),
@@ -6859,6 +7711,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -6871,6 +7740,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -6977,6 +7850,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(79),
     [anon_sym_set_max_time_borrow] = ACTIONS(79),
     [anon_sym_set_min_pulse_width] = ACTIONS(79),
+    [anon_sym_set_data_check] = ACTIONS(79),
+    [anon_sym_set_sense] = ACTIONS(79),
+    [anon_sym_set_resistance] = ACTIONS(79),
+    [anon_sym_set_capacitance] = ACTIONS(79),
+    [anon_sym_reset_design] = ACTIONS(79),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(79),
+    [anon_sym_set_annotated_delay] = ACTIONS(79),
+    [anon_sym_set_annotated_check] = ACTIONS(79),
+    [anon_sym_set_max_skew] = ACTIONS(79),
+    [anon_sym_set_clock_sense] = ACTIONS(79),
+    [anon_sym_set_logic_dc] = ACTIONS(79),
+    [anon_sym_set_logic_one] = ACTIONS(79),
+    [anon_sym_set_logic_zero] = ACTIONS(79),
+    [anon_sym_set_temperature] = ACTIONS(79),
+    [anon_sym_set_switching_activity] = ACTIONS(79),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(79),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(79),
     [anon_sym_get_ports] = ACTIONS(82),
     [anon_sym_get_pins] = ACTIONS(82),
     [anon_sym_get_clocks] = ACTIONS(82),
@@ -6989,6 +7879,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(82),
     [anon_sym_all_registers] = ACTIONS(82),
     [anon_sym_current_instance] = ACTIONS(82),
+    [anon_sym_get_generated_clocks] = ACTIONS(82),
+    [anon_sym_get_object_name] = ACTIONS(82),
+    [anon_sym_get_property] = ACTIONS(82),
+    [anon_sym_get_attribute] = ACTIONS(82),
     [anon_sym_regexp] = ACTIONS(85),
     [anon_sym_while] = ACTIONS(88),
     [anon_sym_expr] = ACTIONS(91),
@@ -7094,6 +7988,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7106,6 +8017,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7213,6 +8128,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7225,6 +8157,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7330,6 +8266,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7342,6 +8295,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7448,6 +8405,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7460,6 +8434,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7566,6 +8544,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7578,6 +8573,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7684,6 +8683,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7696,6 +8712,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7802,6 +8822,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7814,6 +8851,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -7920,6 +8961,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -7932,6 +8990,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8038,6 +9100,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8050,6 +9129,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8156,6 +9239,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8168,6 +9268,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8274,6 +9378,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8286,6 +9407,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8392,6 +9517,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8404,6 +9546,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8510,6 +9656,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8522,6 +9685,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8628,6 +9795,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8640,6 +9824,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8742,6 +9930,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8754,6 +9959,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8857,6 +10066,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8869,6 +10095,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -8972,6 +10202,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -8984,6 +10231,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -9087,6 +10338,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -9099,6 +10367,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -9202,6 +10474,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -9214,6 +10503,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -9317,6 +10610,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(13),
     [anon_sym_set_max_time_borrow] = ACTIONS(13),
     [anon_sym_set_min_pulse_width] = ACTIONS(13),
+    [anon_sym_set_data_check] = ACTIONS(13),
+    [anon_sym_set_sense] = ACTIONS(13),
+    [anon_sym_set_resistance] = ACTIONS(13),
+    [anon_sym_set_capacitance] = ACTIONS(13),
+    [anon_sym_reset_design] = ACTIONS(13),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(13),
+    [anon_sym_set_annotated_delay] = ACTIONS(13),
+    [anon_sym_set_annotated_check] = ACTIONS(13),
+    [anon_sym_set_max_skew] = ACTIONS(13),
+    [anon_sym_set_clock_sense] = ACTIONS(13),
+    [anon_sym_set_logic_dc] = ACTIONS(13),
+    [anon_sym_set_logic_one] = ACTIONS(13),
+    [anon_sym_set_logic_zero] = ACTIONS(13),
+    [anon_sym_set_temperature] = ACTIONS(13),
+    [anon_sym_set_switching_activity] = ACTIONS(13),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(13),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(13),
     [anon_sym_get_ports] = ACTIONS(15),
     [anon_sym_get_pins] = ACTIONS(15),
     [anon_sym_get_clocks] = ACTIONS(15),
@@ -9329,6 +10639,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(15),
     [anon_sym_all_registers] = ACTIONS(15),
     [anon_sym_current_instance] = ACTIONS(15),
+    [anon_sym_get_generated_clocks] = ACTIONS(15),
+    [anon_sym_get_object_name] = ACTIONS(15),
+    [anon_sym_get_property] = ACTIONS(15),
+    [anon_sym_get_attribute] = ACTIONS(15),
     [anon_sym_regexp] = ACTIONS(17),
     [anon_sym_while] = ACTIONS(19),
     [anon_sym_expr] = ACTIONS(21),
@@ -9432,6 +10746,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -9444,6 +10775,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -9546,6 +10881,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -9558,6 +10910,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -9660,6 +11016,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -9672,6 +11045,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -9774,6 +11151,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -9786,6 +11180,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -9888,6 +11286,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -9900,6 +11315,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10002,6 +11421,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10014,6 +11450,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10116,6 +11556,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10128,6 +11585,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10230,6 +11691,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10242,6 +11720,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10344,6 +11826,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10356,6 +11855,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10458,6 +11961,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10470,6 +11990,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10572,6 +12096,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(221),
     [anon_sym_set_max_time_borrow] = ACTIONS(221),
     [anon_sym_set_min_pulse_width] = ACTIONS(221),
+    [anon_sym_set_data_check] = ACTIONS(221),
+    [anon_sym_set_sense] = ACTIONS(221),
+    [anon_sym_set_resistance] = ACTIONS(221),
+    [anon_sym_set_capacitance] = ACTIONS(221),
+    [anon_sym_reset_design] = ACTIONS(221),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(221),
+    [anon_sym_set_annotated_delay] = ACTIONS(221),
+    [anon_sym_set_annotated_check] = ACTIONS(221),
+    [anon_sym_set_max_skew] = ACTIONS(221),
+    [anon_sym_set_clock_sense] = ACTIONS(221),
+    [anon_sym_set_logic_dc] = ACTIONS(221),
+    [anon_sym_set_logic_one] = ACTIONS(221),
+    [anon_sym_set_logic_zero] = ACTIONS(221),
+    [anon_sym_set_temperature] = ACTIONS(221),
+    [anon_sym_set_switching_activity] = ACTIONS(221),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(221),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(221),
     [anon_sym_get_ports] = ACTIONS(223),
     [anon_sym_get_pins] = ACTIONS(223),
     [anon_sym_get_clocks] = ACTIONS(223),
@@ -10584,6 +12125,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(223),
     [anon_sym_all_registers] = ACTIONS(223),
     [anon_sym_current_instance] = ACTIONS(223),
+    [anon_sym_get_generated_clocks] = ACTIONS(223),
+    [anon_sym_get_object_name] = ACTIONS(223),
+    [anon_sym_get_property] = ACTIONS(223),
+    [anon_sym_get_attribute] = ACTIONS(223),
     [anon_sym_regexp] = ACTIONS(225),
     [anon_sym_while] = ACTIONS(227),
     [anon_sym_expr] = ACTIONS(229),
@@ -10660,6 +12205,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(295),
     [anon_sym_set_max_time_borrow] = ACTIONS(295),
     [anon_sym_set_min_pulse_width] = ACTIONS(295),
+    [anon_sym_set_data_check] = ACTIONS(295),
+    [anon_sym_set_sense] = ACTIONS(295),
+    [anon_sym_set_resistance] = ACTIONS(295),
+    [anon_sym_set_capacitance] = ACTIONS(295),
+    [anon_sym_reset_design] = ACTIONS(295),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(295),
+    [anon_sym_set_annotated_delay] = ACTIONS(295),
+    [anon_sym_set_annotated_check] = ACTIONS(295),
+    [anon_sym_set_max_skew] = ACTIONS(295),
+    [anon_sym_set_clock_sense] = ACTIONS(295),
+    [anon_sym_set_logic_dc] = ACTIONS(295),
+    [anon_sym_set_logic_one] = ACTIONS(295),
+    [anon_sym_set_logic_zero] = ACTIONS(295),
+    [anon_sym_set_temperature] = ACTIONS(295),
+    [anon_sym_set_switching_activity] = ACTIONS(295),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(295),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(295),
     [anon_sym_get_ports] = ACTIONS(295),
     [anon_sym_get_pins] = ACTIONS(295),
     [anon_sym_get_clocks] = ACTIONS(295),
@@ -10672,6 +12234,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(295),
     [anon_sym_all_registers] = ACTIONS(295),
     [anon_sym_current_instance] = ACTIONS(295),
+    [anon_sym_get_generated_clocks] = ACTIONS(295),
+    [anon_sym_get_object_name] = ACTIONS(295),
+    [anon_sym_get_property] = ACTIONS(295),
+    [anon_sym_get_attribute] = ACTIONS(295),
     [anon_sym_regexp] = ACTIONS(295),
     [anon_sym_while] = ACTIONS(295),
     [anon_sym_expr] = ACTIONS(295),
@@ -10749,6 +12315,23 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_set_ideal_transition] = ACTIONS(300),
     [anon_sym_set_max_time_borrow] = ACTIONS(300),
     [anon_sym_set_min_pulse_width] = ACTIONS(300),
+    [anon_sym_set_data_check] = ACTIONS(300),
+    [anon_sym_set_sense] = ACTIONS(300),
+    [anon_sym_set_resistance] = ACTIONS(300),
+    [anon_sym_set_capacitance] = ACTIONS(300),
+    [anon_sym_reset_design] = ACTIONS(300),
+    [anon_sym_set_hierarchy_separator] = ACTIONS(300),
+    [anon_sym_set_annotated_delay] = ACTIONS(300),
+    [anon_sym_set_annotated_check] = ACTIONS(300),
+    [anon_sym_set_max_skew] = ACTIONS(300),
+    [anon_sym_set_clock_sense] = ACTIONS(300),
+    [anon_sym_set_logic_dc] = ACTIONS(300),
+    [anon_sym_set_logic_one] = ACTIONS(300),
+    [anon_sym_set_logic_zero] = ACTIONS(300),
+    [anon_sym_set_temperature] = ACTIONS(300),
+    [anon_sym_set_switching_activity] = ACTIONS(300),
+    [anon_sym_set_slew_derate_from_library] = ACTIONS(300),
+    [anon_sym_derive_clock_uncertainty] = ACTIONS(300),
     [anon_sym_get_ports] = ACTIONS(300),
     [anon_sym_get_pins] = ACTIONS(300),
     [anon_sym_get_clocks] = ACTIONS(300),
@@ -10761,6 +12344,10 @@ static const uint16_t ts_parse_table[LARGE_STATE_COUNT][SYMBOL_COUNT] = {
     [anon_sym_all_clocks] = ACTIONS(300),
     [anon_sym_all_registers] = ACTIONS(300),
     [anon_sym_current_instance] = ACTIONS(300),
+    [anon_sym_get_generated_clocks] = ACTIONS(300),
+    [anon_sym_get_object_name] = ACTIONS(300),
+    [anon_sym_get_property] = ACTIONS(300),
+    [anon_sym_get_attribute] = ACTIONS(300),
     [anon_sym_regexp] = ACTIONS(300),
     [anon_sym_while] = ACTIONS(300),
     [anon_sym_expr] = ACTIONS(300),

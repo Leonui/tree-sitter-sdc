@@ -92,3 +92,100 @@ set_load 0.5 [get_ports [get_nets -of_objects [get_pins cpu/out]]]
                       name: (sdc_query_name)
                       arguments: (word_list
                         (simple_word)))))))))))))
+
+==================
+current_instance query
+==================
+
+current_instance top/cpu
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (simple_word))))
+
+==================
+get_generated_clocks
+==================
+
+get_generated_clocks
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)))
+
+==================
+get_generated_clocks with filter
+==================
+
+get_generated_clocks -filter "is_inverted == true"
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (option_flag)
+      (quoted_word))))
+
+==================
+get_object_name
+==================
+
+get_object_name [get_ports clk]
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word)))))))
+
+==================
+get_property
+==================
+
+get_property [get_cells cpu] ref_name
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word))))
+      (simple_word))))
+
+==================
+get_attribute
+==================
+
+get_attribute [get_pins clk] clocks
+
+---
+
+(source_file
+  (sdc_query_command
+    name: (sdc_query_name)
+    arguments: (word_list
+      (command_substitution
+        (sdc_query_command
+          name: (sdc_query_name)
+          arguments: (word_list
+            (simple_word))))
+      (simple_word))))

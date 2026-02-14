@@ -238,6 +238,74 @@
                 {
                   "type": "STRING",
                   "value": "set_min_pulse_width"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_data_check"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_sense"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_resistance"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_capacitance"
+                },
+                {
+                  "type": "STRING",
+                  "value": "reset_design"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_hierarchy_separator"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_annotated_delay"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_annotated_check"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_max_skew"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_clock_sense"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_logic_dc"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_logic_one"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_logic_zero"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_temperature"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_switching_activity"
+                },
+                {
+                  "type": "STRING",
+                  "value": "set_slew_derate_from_library"
+                },
+                {
+                  "type": "STRING",
+                  "value": "derive_clock_uncertainty"
                 }
               ]
             },
@@ -321,6 +389,22 @@
                 {
                   "type": "STRING",
                   "value": "current_instance"
+                },
+                {
+                  "type": "STRING",
+                  "value": "get_generated_clocks"
+                },
+                {
+                  "type": "STRING",
+                  "value": "get_object_name"
+                },
+                {
+                  "type": "STRING",
+                  "value": "get_property"
+                },
+                {
+                  "type": "STRING",
+                  "value": "get_attribute"
                 }
               ]
             },
